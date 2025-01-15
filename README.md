@@ -7,4 +7,4 @@
 3. Telepítsd a **npm** helyett a **pnpm**-et `npm install -g pnpm`
 4. Telepítsd a kötelező csomagokat `pnpm install`
 
-5. Futtatás (Nézés): `pnpm run dev`
+5. Futtatás (Nézés): `pnpm run dev` 🗿
