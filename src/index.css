@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: Gotham;
+    src: url('/fonts/HomepageBaukasten-Bold.ttf') format('truetype'),
+}
+
+.Gotham {
+    font-family: Gotham;
+}
+
+body {
+    font-family: Gotham;
+    background-color: #0F1015;
+    font-size: large;
+}
