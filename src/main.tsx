@@ -5,11 +5,21 @@ import {
   RouterProvider,
 } from 'react-router-dom'
 import MainPage from './pages/mainPage'
+import ProjectPage from './pages/projectPage'
+import TeamPage from './pages/teamPage'
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <MainPage />,
+  },
+  {
+    path: '/projects',
+    element: <ProjectPage />,
+  }, 
+  {
+    path: '/team',
+    element: <TeamPage />,
   }
 ])
 
