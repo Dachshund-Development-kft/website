@@ -28,8 +28,8 @@ const NavLayout: React.FC = () => {
                         return (
                             <div
                                 key={index}
-                                className={`flex flex-row items-center ${
-                                    isActive ? "opacity-100" : "opacity-50"
+                                className={`flex flex-row items-center transition-opacity duration-300 ${
+                                    isActive ? "opacity-100" : "opacity-50 hover:opacity-100"
                                 }`}
                             >
                                 <Link to={item.path} className="text-white flex items-center">
@@ -37,8 +37,10 @@ const NavLayout: React.FC = () => {
                                 </Link>
                                 <Link
                                     to={item.path}
-                                    className={`text-white ml-1 ${
-                                        isActive ? "border-b-2 border-white" : ""
+                                    className={`text-white ml-1 relative after:content-[''] after:absolute after:left-0 after:bottom-[-2px] after:h-[2px] after:bg-white after:w-0 after:transition-all after:duration-300 ${
+                                        isActive
+                                            ? "after:w-full"
+                                            : "hover:after:w-full after:opacity-100"
                                     }`}
                                 >
                                     {item.label}
