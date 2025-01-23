@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { HiMiniHome } from "react-icons/hi2";
 import { FaDiagramProject } from "react-icons/fa6";
@@ -14,15 +14,24 @@ const NavLayout: React.FC = () => {
                     <div className="flex flex-row">
                         <Link to="/" className="text-white"><img width={50} src="./Logo.svg" alt="Logo" title='Logo' /></Link>
                     </div>
-                    <div className="flex flex-row m-auto">
-                        <Link to="/" className="text-white"><HiMiniHome /> Főoldal</Link>
-                        <Link to="/about" className="text-white ml-4"><FaDiagramProject /> Projektek</Link>
-                        <Link to="/" className="text-white ml-4"><HiUserAdd /> Csapat</Link>
+                    <div className="flex flex-row m-auto gap-5">
+                        <div className="flex flex-row items-center">
+                            <Link to="/" className="text-white"><HiMiniHome /></Link>
+                            <Link to="/" className="text-white ml-2">Főoldal</Link>
+                        </div>
+                        <div className="flex flex-row items-center">
+                            <Link to="/about" className="text-white"><FaDiagramProject /></Link>
+                            <Link to="/about" className="text-white ml-2">Projektek</Link>
+                        </div>
+                        <div className="flex flex-row items-center">
+                            <Link to="/" className="text-white"><HiUserAdd /></Link>
+                            <Link to="/" className="text-white ml-2">Csapat</Link>
+                        </div>
                     </div>
                     <div className="flex-e flex-row">
                         <Link to="/asd" className="text-white"><img width={50} src="" alt="" title='Logo' /></Link>
                     </div>
-                </nav>  
+                </nav>
             </div>
         </>
     );
