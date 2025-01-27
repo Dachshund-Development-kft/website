@@ -15,4 +15,5 @@ body {
     font-family: Gotham;
     background-color: #0F1015;
     font-size: large;
+    overflow-x: hidden;
 }

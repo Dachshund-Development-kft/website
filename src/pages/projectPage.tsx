@@ -5,7 +5,7 @@ const ProjectPage: React.FC = () => {
     return (
         <>
             <NavLayout />
-            <div className="min-h-screen flex items-center justify-center bg-[#0F1015]">
+            <div className="flex items-center justify-center">
                 
             </div>
         </>

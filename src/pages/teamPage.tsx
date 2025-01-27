@@ -12,7 +12,7 @@ const TeamPage: React.FC = () => {
     return (
         <>
             <NavLayout />
-            <div className="min-h-screen flex flex-wrap items-center justify-center bg-[#0F1015] p-4">
+            <div className="flex flex-wrap items-center justify-center p-4">
                 {teamMembers.map((member, index) => (
                     <div 
                         key={index} 
