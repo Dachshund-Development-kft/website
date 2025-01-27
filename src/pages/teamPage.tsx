@@ -71,29 +71,18 @@ const TeamPage: React.FC = () => {
                             <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center bg-black bg-opacity-80 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-450 p-4 rounded-lg pointer-events-none">
                                 <p className="mb-4 italic">"{member.quote}"</p>
                                 <div className="flex gap-4">
-                                    <a
-                                        href={member.socials.discord}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="text-blue-500 hover:text-blue-400 pointer-events-auto">
-                                        <FaDiscord size={24} />
-                                    </a>
-                                    <a
-                                        href={member.socials.github}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="text-blue-500 hover:text-blue-400 pointer-events-auto"
-                                    >
-                                        <FaGithub size={24} />
-                                    </a>
-                                    <a
-                                        href={member.socials.instagram}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="text-blue-500 hover:text-blue-400 pointer-events-auto"
-                                    >
-                                        <FaInstagram size={24} />
-                                    </a>
+                                    {Object.entries(member.socials).map(([key, url]) => (
+                                        <a
+                                            key={key}
+                                            href={url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-blue-500 hover:text-blue-400 pointer-events-auto">
+                                            {key === 'discord' && <FaDiscord size={24} />}
+                                            {key === 'github' && <FaGithub size={24} />}
+                                            {key === 'instagram' && <FaInstagram size={24} />}
+                                        </a>
+                                    ))}
                                 </div>
                             </div>
                         </div>
