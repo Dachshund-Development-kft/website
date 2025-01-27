@@ -3,14 +3,15 @@ import { Link, useLocation } from 'react-router-dom';
 import { HiMiniHome } from "react-icons/hi2";
 import { FaDiagramProject } from "react-icons/fa6";
 import { HiUserAdd } from "react-icons/hi";
+import { FaGithub } from 'react-icons/fa';
 
 const NavLayout: React.FC = () => {
     const location = useLocation();
 
     const navItems = [
-        { path: "/", icon: <HiMiniHome />, label: "Főoldal" },
-        { path: "/projects", icon: <FaDiagramProject />, label: "Projektek" },
-        { path: "/team", icon: <HiUserAdd />, label: "Csapat" },
+        { path: "/", icon: <HiMiniHome />, label: "Home" },
+        { path: "/projects", icon: <FaDiagramProject />, label: "Projects" },
+        { path: "/team", icon: <HiUserAdd />, label: "Team" },
     ];
 
     return (
@@ -52,8 +53,8 @@ const NavLayout: React.FC = () => {
             </nav>
 
             <div className="flex items-center">
-                <button className="bg-[#0F1015] text-white px-4 py-2 rounded-md shadow-lg hover:bg-gray-800">
-                    Bejelentkezés
+                <button className="bg-[#0F1015] text-white px-4 py-2 rounded-md shadow-lg hover:bg-gray-700 flex items-center gap-2 transition-all duration-300">
+                <FaGithub /> Login
                 </button>
             </div>
         </div>
