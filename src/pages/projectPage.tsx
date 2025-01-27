@@ -5,9 +5,12 @@ const ProjectPage: React.FC = () => {
     return (
         <>
             <NavLayout />
-            <div className="flex items-center justify-center">
+            <Blobs/>
+            <div className="items-center  text-white">
                 
+              
             </div>
+            
         </>
     );
 };
