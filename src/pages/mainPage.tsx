@@ -9,7 +9,6 @@ const MainPage: React.FC = () => {
             <Blobs/>
             <div className="items-center  text-white">
                 
-              
             </div>
             
         </>
