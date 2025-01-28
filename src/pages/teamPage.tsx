@@ -61,15 +61,20 @@ const TeamPage: React.FC = () => {
                     {teamMembers.map((member, index) => (
                         <div
                             id={`member-${index}`}
-                            key={index}
-                            className="group relative bg-black bg-opacity-25 backdrop-blur-lg rounded-lg p-6 w-72 text-center shadow-lg transform transition-all duration-550">
-                            <img src={member.image} alt={member.name} className="w-32 h-32 mx-auto rounded-full mb-4" />
+                            key={member.name}
+                            className="group relative bg-black bg-opacity-25 backdrop-blur-lg rounded-lg p-6 w-72 text-center shadow-lg transform transition-all duration-300">
+                            <img
+                                src={member.image}
+                                alt={member.name}
+                                className="w-32 h-32 mx-auto rounded-full mb-4"
+                                loading="lazy"
+                            />
                             <h2 className="text-xl font-bold mb-2 text-white">{member.name}</h2>
                             <span className="inline-block bg-blue-500 text-white px-3 py-1 rounded-full text-sm">
                                 {member.role}
                             </span>
 
-                            <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center bg-black bg-opacity-80 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-550 p-4 rounded-lg pointer-events-none">
+                            <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center bg-black bg-opacity-80 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 rounded-lg pointer-events-none">
                                 <p className="mb-4 italic">"{member.quote}"</p>
                                 <div className="flex gap-4">
                                     {Object.entries(member.socials).map(([key, url]) => (
