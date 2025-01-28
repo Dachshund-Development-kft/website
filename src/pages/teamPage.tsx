@@ -49,7 +49,7 @@ const TeamPage: React.FC = () => {
             quote: "Striving for clean code and elegant designs.",
             socials: {
                 discord: "https://discord.com/users/691581143669276692",
-                github: "https://github.com/gutibalazs",
+                github: "https://github.com/baluka0013",
                 instagram: "https://instagram.com/gutibalazs"
             }
         },
@@ -60,7 +60,7 @@ const TeamPage: React.FC = () => {
             quote: "Leading teams to success, one project at a time.",
             socials: {
                 discord: "https://discord.com/users/801162422580019220",
-                github: "https://github.com/ballobenedek",
+                github: "https://github.com/b3ni15",
                 instagram: "https://instagram.com/ballobenedek"
             }
         },
@@ -71,7 +71,7 @@ const TeamPage: React.FC = () => {
             quote: "Passionate about creating seamless user experiences.",
             socials: {
                 discord: "https://discord.com/users/1006581830880874618",
-                github: "https://github.com/domokosadam",
+                github: "https://github.com/Breadman7180",
                 instagram: "https://instagram.com/domokosadam"
             }
         },
@@ -82,7 +82,7 @@ const TeamPage: React.FC = () => {
             quote: "Turning ideas into interactive interfaces.",
             socials: {
                 discord: "https://discord.com/users/1015296418686189628",
-                github: "https://github.com/meicherzoltan",
+                github: "https://github.com/MZoltan7",
                 instagram: "https://instagram.com/meicherzoltan"
             }
         }
