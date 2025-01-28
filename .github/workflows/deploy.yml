@@ -36,10 +36,11 @@ jobs:
           exit 1
         fi
 
+    # Production branch-re való deploy
     - name: Deploy to production branch
-    - env:
+      env:
         GITHUB_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
-    - run: |
+      run: |
         git config user.name "B3ni15"
         git config user.email "ballobeni08@gmail.com"
     
@@ -55,7 +56,7 @@ jobs:
     
         # Build fájlok másolása és commit
         git rm -rf .
-        cp -r build/* .
+        cp -r dist/* .
         git add --all
         git commit -m "Deploy to production"
         git push origin production --force
