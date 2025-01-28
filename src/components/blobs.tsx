@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react';
 const Blobs: React.FC = () => {
     const [pageCenter, setPageCenter] = useState(0);
     useEffect(() => {
-        // Calculate the center of the full page height (scrollable height)
         const center = document.documentElement.scrollHeight / 2;
         setPageCenter(center);
     }, []);
