@@ -78,7 +78,7 @@ const TeamPage: React.FC = () => {
         {
             name: "Meicher Zoltán",
             role: "Frontend Developer",
-            image: "https://cdn.discordapp.com/avatars/1015296418686189628/6c5996770c985bcd6e5b68131ff2ba04.webp?size=128",
+            image: "https://cdn.discordapp.com/avatars/1015296418686189628/1ba17f8720108bac00f6fa44d5c0aa48.webp?size=128",
             quote: "Turning ideas into interactive interfaces.",
             socials: {
                 discord: "https://discord.com/users/1015296418686189628",
