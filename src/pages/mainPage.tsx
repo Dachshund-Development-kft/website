@@ -6,7 +6,7 @@ import FooterLayout from '../components/footerLayout';
 const MainPage: React.FC = () => {
     return (
         <>
-            <NavLayout />
+            
             <main className="items-center text-white">
                 
             </main>
