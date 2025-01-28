@@ -31,7 +31,7 @@ jobs:
     # Ellenőrzés, hogy létezik-e a build mappa
     - name: Check if build directory exists
       run: |
-        if [ ! -d "build" ]; then
+        if [ ! -d "dist" ]; then
           echo "Error: Build directory does not exist."
           exit 1
         fi
@@ -51,7 +51,7 @@ jobs:
 
         # Build fájlok másolása és commit
         git rm -rf .
-        cp -r build/* .
+        cp -r dist/* .
         git add --all
         git commit -m "Deploy to production"
         git push origin production --force
