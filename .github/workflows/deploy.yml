@@ -36,22 +36,26 @@ jobs:
           exit 1
         fi
 
-    # Production branch frissítése
     - name: Deploy to production branch
-      run: |
-        git config user.name "GitHub Actions"
-        git config user.email "actions@github.com"
-
+    - env:
+        GITHUB_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
+    - run: |
+        git config user.name "B3ni15"
+        git config user.email "ballobeni08@gmail.com"
+    
+        # Hitelesítés a Personal Access Token segítségével
+        git remote set-url origin https://B3ni15:${{ secrets.DEPLOY_TOKEN }}@github.com/Dachshund-Development-kft/website.git
+    
         # Váltás a production branch-re, ha létezik, vagy létrehozás
         if git show-ref --verify --quiet refs/heads/production; then
           git checkout production
         else
           git checkout --orphan production
         fi
-
+    
         # Build fájlok másolása és commit
         git rm -rf .
-        cp -r dist/* .
+        cp -r build/* .
         git add --all
         git commit -m "Deploy to production"
         git push origin production --force
