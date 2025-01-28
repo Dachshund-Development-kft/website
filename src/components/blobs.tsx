@@ -2,7 +2,9 @@ import React from 'react';
 
 const Blobs: React.FC = () => {
     return (
-        <div className='overflow-hidden'>
+        <>
+        {/* 
+            <div className='overflow-hidden'>
             <img
                 src="./blob.svg"
                 alt="Blob"
@@ -19,6 +21,8 @@ const Blobs: React.FC = () => {
                 className="absolute top-[calc(50%+50%)] left-[-700px] w-[1200px] filter blur-[600px] opacity-25 z-[-2]"
             />
         </div>
+        */}
+        </>
     );
 };
 
