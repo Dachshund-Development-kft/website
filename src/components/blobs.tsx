@@ -46,7 +46,7 @@ const Blobs: React.FC = () => {
                         src="./blobBottom.svg"
                         alt="Blob"
                         className="absolute left-[-150px] w-[1200px] filter blur-[600px] opacity-25 z-[-2]"
-                        style={{ top: `${pageCenter+pageCenter-85}px`, }}
+                        style={{ top: `${pageCenter+pageCenter-80}px`, }}
                     />
                 </div>
             </div>
