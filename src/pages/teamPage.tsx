@@ -1,11 +1,47 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import NavLayout from '../components/navLayout';
 import Blobs from '../components/blobs';
 import { FaDiscord, FaGithub, FaInstagram } from 'react-icons/fa';
 import FooterLayout from '../components/footerLayout';
 
+const TeamMember: React.FC<{ member: any }> = ({ member }) => {
+    return (
+        <div
+            className="group relative bg-black bg-opacity-25 rounded-lg p-6 w-72 text-center shadow-lg transform transition-all duration-300">
+            <img 
+                src={member.image} 
+                alt={member.name} 
+                className="w-32 h-32 mx-auto rounded-full mb-4" 
+                loading="lazy"  
+            />
+            <h2 className="text-xl font-bold mb-2 text-white">{member.name}</h2>
+            <span className="inline-block bg-blue-500 text-white px-3 py-1 rounded-full text-sm">
+                {member.role}
+            </span>
+
+            <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center bg-black bg-opacity-80 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 rounded-lg pointer-events-none">
+                <p className="mb-4 italic">"{member.quote}"</p>
+                <div className="flex gap-4">
+                    {Object.entries(member.socials).map(([key, url]) => (
+                        <a
+                            key={key}
+                            href={url as string}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-500 hover:text-blue-400 pointer-events-auto">
+                            {key === 'discord' && <FaDiscord size={24} />}
+                            {key === 'github' && <FaGithub size={24} />}
+                            {key === 'instagram' && <FaInstagram size={24} />}
+                        </a>
+                    ))}
+                </div>
+            </div>
+        </div>
+    );
+};
+
 const TeamPage: React.FC = () => {
-    const teamMembers = [
+    const teamMembers = useMemo(() => [
         {
             name: "Guti Balázs",
             role: "Frontend Developer",
@@ -50,48 +86,16 @@ const TeamPage: React.FC = () => {
                 instagram: "https://instagram.com/meicherzoltan"
             }
         }
-    ];
+    ], []);
 
     return (
         <>
             <NavLayout />
             <Blobs />
-            <main className="h-screen flex justify-center items-center">
-                <div className="flex justify-center items-center flex-wrap gap-6 p-8">
+            <main className="min-h-screen flex justify-center items-center">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-8">
                     {teamMembers.map((member, index) => (
-                        <div
-                            id={`member-${index}`}
-                            key={member.name}
-                            className="group relative bg-black bg-opacity-25 backdrop-blur-lg rounded-lg p-6 w-72 text-center shadow-lg transform transition-all duration-300">
-                            <img
-                                src={member.image}
-                                alt={member.name}
-                                className="w-32 h-32 mx-auto rounded-full mb-4"
-                                loading="lazy"
-                            />
-                            <h2 className="text-xl font-bold mb-2 text-white">{member.name}</h2>
-                            <span className="inline-block bg-blue-500 text-white px-3 py-1 rounded-full text-sm">
-                                {member.role}
-                            </span>
-
-                            <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center bg-black bg-opacity-80 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 rounded-lg pointer-events-none">
-                                <p className="mb-4 italic">"{member.quote}"</p>
-                                <div className="flex gap-4">
-                                    {Object.entries(member.socials).map(([key, url]) => (
-                                        <a
-                                            key={key}
-                                            href={url}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="text-blue-500 hover:text-blue-400 pointer-events-auto">
-                                            {key === 'discord' && <FaDiscord size={24} />}
-                                            {key === 'github' && <FaGithub size={24} />}
-                                            {key === 'instagram' && <FaInstagram size={24} />}
-                                        </a>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
+                        <TeamMember key={index} member={member} />
                     ))}
                 </div>
             </main>
