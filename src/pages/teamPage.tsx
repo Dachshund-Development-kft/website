@@ -55,7 +55,7 @@ const TeamPage: React.FC = () => {
         <>
             <NavLayout />
             <Blobs />
-            <div className="h-screen flex justify-center items-center">
+            <main className="h-screen flex justify-center items-center">
                 <div className="flex justify-center items-center flex-wrap gap-6 p-8">
                     {teamMembers.map((member, index) => (
                         <div
@@ -88,7 +88,7 @@ const TeamPage: React.FC = () => {
                         </div>
                     ))}
                 </div>
-            </div>
+            </main>
         </>
     );
 };

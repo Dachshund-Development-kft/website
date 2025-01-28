@@ -15,7 +15,7 @@ const NavLayout: React.FC = () => {
     ];
 
     return (
-        <div className="flex flex-row p-2 items-center" style={{ backgroundColor: "rgba(26, 27, 34, 0.65)" }}>
+        <div className="flex flex-row p-2 items-center bg-[#1A1B22] bg-opacity-65">
             <div className="flex items-center">
                 <Link to="/" className="text-white">
                     <img width={50} src="./Logo.svg" alt="Logo" title="Logo" />

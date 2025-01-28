@@ -7,10 +7,9 @@ const MainPage: React.FC = () => {
         <>
             <NavLayout />
             <Blobs/>
-            <div className="items-center  text-white">
+            <main className="items-center  text-white">
                 
-            </div>
-            
+            </main>
         </>
     );
 };
