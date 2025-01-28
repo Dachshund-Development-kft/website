@@ -23,15 +23,11 @@ const NavLayout: React.FC = () => {
                     <img width={50} src="./Logo.svg" alt="Logo" title="Logo" />
                 </Link>
             </div>
-
-            {/* Mobile Menu Button */}
             <div className="lg:hidden ml-auto">
                 <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-white">
                     <HiOutlineMenu size={30} />
                 </button>
             </div>
-
-            {/* Mobile Navbar */}
             <nav className={`lg:hidden flex flex-col items-start gap-8 p-4 fixed top-16 right-0 bg-[#1A1B22] max-w-max w-auto h-auto transition-all duration-300 transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} z-50`}>
                 <div className="flex flex-col items-start gap-4">
                     {navItems.map((item, index) => {
@@ -59,8 +55,6 @@ const NavLayout: React.FC = () => {
                     })}
                 </div>
             </nav>
-
-            {/* Desktop Navbar (md and larger) */}
             <nav className="hidden lg:flex flex-row justify-center w-full">
                 <div className="flex flex-row items-center gap-8">
                     {navItems.map((item, index) => {
@@ -88,8 +82,6 @@ const NavLayout: React.FC = () => {
                     })}
                 </div>
             </nav>
-
-            {/* Login Button */}
             <div className="flex items-center">
                 <button className="bg-[#0F1015] text-white px-4 py-2 rounded-md shadow-lg hover:bg-gray-700 flex items-center gap-2 transition-all duration-300">
                     <FaGithub /> Login
