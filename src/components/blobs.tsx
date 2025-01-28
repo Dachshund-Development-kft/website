@@ -11,46 +11,9 @@ const Blobs: React.FC = () => {
 
     return (
         <div className="fixed inset-0 -z-10 overflow-hidden">
-            <img
-                src="./blob.svg"
-                alt="Blob"
-                style={{
-                    position: "absolute",
-                    top: -635,
-                    left: -700,
-                    zIndex: -10,
-                    width: "1200px",
-                    filter: "blur(600px)",
-                    opacity: 0.25,
-                }}
-            />
-            <img
-                src="./blob.svg"
-                alt="Blob"
-                style={{
-                    position: "absolute",
-                    top: `${pageCenter}px`,
-                    right: -700,
-                    zIndex: -10,
-                    width: "1200px",
-                    filter: "blur(600px)",
-                    opacity: 0.25,
-                    transform: "translateY(-50%)",
-                }}
-            />
-            <img
-                src="./blobBottom.svg"
-                alt="Blob"
-                style={{
-                    position: "absolute",
-                    bottom: -150,
-                    left: -700,
-                    zIndex: -10,
-                    width: "1200px",
-                    filter: "blur(600px)",
-                    opacity: 0.25,
-                }}
-            />
+            <img src="./blob.svg" alt="Blob" style={{ position: "absolute", top: -635, left: -700, zIndex: -10, width: "1200px", filter: "blur(600px)", opacity: 0.25, }}/>
+            <img src="./blob.svg"alt="Blob" style={{position: "absolute", top: `${pageCenter}px`, right: -700, zIndex: -10, width: "1200px", filter: "blur(600px)", opacity: 0.25, transform: "translateY(-50%)",  }} />
+            <img src="./blobBottom.svg"alt="Blob"style={{position: "absolute", bottom: -150, left: -700, zIndex: -10, width: "1200px", filter: "blur(600px)", opacity: 0.25,  }} />
         </div>
     );
 };
