@@ -7,7 +7,7 @@ const MainPage: React.FC = () => {
     return (
         <>
             <NavLayout />
-            <main className="items-center  text-white">
+            <main className="items-center text-white">
                 
             </main>
             <FooterLayout />
