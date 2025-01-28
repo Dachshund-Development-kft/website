@@ -45,7 +45,7 @@ jobs:
         git config user.email "ballobeni08@gmail.com"
     
         # Hitelesítés a Personal Access Token segítségével
-        git remote set-url origin https://B3ni15:${{ secrets.DEPLOY_TOKEN }}@github.com/Dachshund-Development-kft/website.git
+        git remote set-url origin https://b3ni15:${{ secrets.DEPLOY_TOKEN }}@github.com/Dachshund-Development-kft/website
     
         # Váltás a production branch-re, ha létezik, vagy létrehozás
         if git show-ref --verify --quiet refs/heads/production; then
