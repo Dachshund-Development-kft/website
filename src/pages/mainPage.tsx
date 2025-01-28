@@ -9,7 +9,7 @@ const MainPage: React.FC = () => {
             <NavLayout />
             <main className="flex-grow items-center">
                 <div className="flex flex-col items-center justify-center h-screen">
-                <div className="flex flex-col md:flex-row items-center mb-10 ml-0 md:ml-40 space-y-6 md:space-y-0 sm:mt-40">
+                <div className="flex flex-col md:flex-row items-center mb-10 ml-0 md:ml-40 space-y-6 md:space-y-0 sm:mt-40 md:mt-0">
     <div className="relative w-full md:w-auto flex justify-center md:justify-start">
         <img
             src="/backgroundImage.svg"
