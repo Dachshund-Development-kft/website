@@ -4,7 +4,7 @@ const Blobs: React.FC = () => {
     const [pageCenter, setPageCenter] = useState(0);
 
     useEffect(() => {
-        const center = document.documentElement.scrollHeight / 2;
+        const center = window.innerHeight / 2;
         setPageCenter(center);
     }, []);
 

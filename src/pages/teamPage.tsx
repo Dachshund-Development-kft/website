@@ -2,6 +2,7 @@ import React from 'react';
 import NavLayout from '../components/navLayout';
 import Blobs from '../components/blobs';
 import { FaDiscord, FaGithub, FaInstagram } from 'react-icons/fa';
+import FooterLayout from '../components/footerLayout';
 
 const TeamPage: React.FC = () => {
     const teamMembers = [
@@ -51,8 +52,6 @@ const TeamPage: React.FC = () => {
         }
     ];
 
-
-
     return (
         <>
             <NavLayout />
@@ -91,6 +90,7 @@ const TeamPage: React.FC = () => {
                     ))}
                 </div>
             </main>
+            <FooterLayout />
         </>
     );
 };
