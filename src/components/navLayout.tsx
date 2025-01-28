@@ -29,20 +29,18 @@ const NavLayout: React.FC = () => {
                         return (
                             <div
                                 key={index}
-                                className={`flex flex-row items-center transition-opacity duration-300 ${
-                                    isActive ? "opacity-100" : "opacity-50 hover:opacity-100"
-                                }`}
+                                className={`flex flex-row items-center transition-opacity duration-300 ${isActive ? "opacity-100" : "opacity-50 hover:opacity-100"
+                                    }`}
                             >
                                 <Link to={item.path} className="text-white flex items-center">
                                     {item.icon}
                                 </Link>
                                 <Link
                                     to={item.path}
-                                    className={`text-white ml-1 relative after:content-[''] after:absolute after:left-0 after:bottom-[-2px] after:h-[2px] after:bg-white after:w-0 after:transition-all after:duration-300 ${
-                                        isActive
+                                    className={`text-white ml-1 relative after:content-[''] after:absolute after:left-0 after:bottom-[-2px] after:h-[2px] after:bg-white after:w-0 after:transition-all after:duration-300 ${isActive
                                             ? "after:w-full"
                                             : "hover:after:w-full after:opacity-100"
-                                    }`}
+                                        }`}
                                 >
                                     {item.label}
                                 </Link>
@@ -53,7 +51,7 @@ const NavLayout: React.FC = () => {
             </nav>
             <div className="flex items-center">
                 <button className="bg-[#0F1015] text-white px-4 py-2 rounded-md shadow-lg hover:bg-gray-700 flex items-center gap-2 transition-all duration-300">
-                <FaGithub /> Login
+                    <FaGithub /> Login
                 </button>
             </div>
         </div>
