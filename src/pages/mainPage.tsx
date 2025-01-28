@@ -34,7 +34,7 @@ const MainPage: React.FC = () => {
                             A Dachshund Development elkötelezett az innovatív és hatékony informatikai
                             megoldások iránt. Célunk, hogy segítsük ügyfeleinket a digitális térben való fejlődésben
                             modern technológiákkal és szakértelemmel.
-                        </p>
+                        </p><br />
                         <ul className="md:text-lg sm:text-sm text-gray-400 text-left list-disc pl-6">
                             <li>
                                 <span className="text-white font-semibold">Webfejlesztés:</span> Felhasználóbarát weboldalak és alkalmazások.
@@ -45,7 +45,7 @@ const MainPage: React.FC = () => {
                             <li>
                                 <span className="text-white font-semibold">IT-infrastruktúra menedzsment:</span> Stabil rendszerek tervezése és üzemeltetése.
                             </li>
-                        </ul>
+                        </ul><br />
                         <p className="md:text-lg sm:text-sm text-gray-300 mt-4 text-left">
                             Hiszünk abban, hogy az informatika az innováció és a fejlődés kulcsa. Fedezzük fel együtt a digitális lehetőségeket!
                         </p>

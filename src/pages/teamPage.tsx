@@ -93,7 +93,7 @@ const TeamPage: React.FC = () => {
             <NavLayout />
             <Blobs />
             <main className="min-h-screen flex justify-center items-center">
-                <div className="flex flex-wrap justify-center gap-6 p-8 w-full max-w-screen-xl">
+                <div className="flex flex-wrap justify-center gap-6 w-full max-w-screen-xl">
                     {teamMembers.map((member, index) => (
                         <TeamMember key={index} member={member} />
                     ))}
