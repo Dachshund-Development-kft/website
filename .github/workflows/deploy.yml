@@ -1,0 +1,39 @@
+name: Deploy to Production
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Kódbázis checkout
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    # Node.js telepítés
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+
+    # Függőségek telepítése
+    - name: Install dependencies
+      run: npm install
+
+    # React build készítése
+    - name: Build the React app
+      run: npm run build
+
+    # Production branch beállítása
+    - name: Deploy to production branch
+      run: |
+        git config user.name "GitHub Actions"
+        git config user.email "actions@github.com"
+        git checkout --orphan production
+        git --work-tree=build add --all
+        git --work-tree=build commit -m "Deploy to production"
+        git push origin production --force
