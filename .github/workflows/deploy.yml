@@ -28,12 +28,22 @@ jobs:
     - name: Build the React app
       run: npm run build
 
-    # Production branch beállítása
+    # Production branch frissítése
     - name: Deploy to production branch
       run: |
         git config user.name "GitHub Actions"
         git config user.email "actions@github.com"
-        git checkout --orphan production
-        git --work-tree=build add --all
-        git --work-tree=build commit -m "Deploy to production"
+
+        # Váltás a production branch-re, ha létezik, vagy létrehozás
+        if git show-ref --verify --quiet refs/heads/production; then
+          git checkout production
+        else
+          git checkout --orphan production
+        fi
+
+        # Build fájlok másolása és commit
+        git rm -rf .
+        cp -r build/* .
+        git add --all
+        git commit -m "Deploy to production"
         git push origin production --force
