@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import NavLayout from '../components/navLayout';
 import Blobs from '../components/blobs';
-import { FaDiscord, FaGithub, FaInstagram } from 'react-icons/fa';
+import { FaDiscord, FaGithub, FaSteam } from 'react-icons/fa';
 import FooterLayout from '../components/footerLayout';
 
 const TeamMember: React.FC<{ member: any }> = ({ member }) => {
@@ -30,7 +30,7 @@ const TeamMember: React.FC<{ member: any }> = ({ member }) => {
                             className="text-blue-500 hover:text-blue-400 pointer-events-auto">
                             {key === 'discord' && <FaDiscord size={24} />}
                             {key === 'github' && <FaGithub size={24} />}
-                            {key === 'instagram' && <FaInstagram size={24} />}
+                            {key === 'steam' && <FaSteam size={24} />}
                         </a>
                     ))}
                 </div>
@@ -44,45 +44,44 @@ const TeamPage: React.FC = () => {
         {
             name: "Guti Balázs",
             role: "Frontend Developer",
-            image: "https://cdn.discordapp.com/avatars/691581143669276692/5fd0c3677f16c82aab67d08870743181.webp?size=128",
+            image: "https://avatars.githubusercontent.com/u/98970569?v=4",
             quote: "Striving for clean code and elegant designs.",
             socials: {
                 discord: "https://discord.com/users/691581143669276692",
                 github: "https://github.com/baluka0013",
-                instagram: "https://instagram.com/gutibalazs"
+                steam: "https://steamcommunity.com/id/LilKubikACreeperr"
             }
         },
         {
             name: "Balló Benedek",
             role: "Project Manager",
-            image: "https://avatars.fastly.steamstatic.com/7bbb5afcc7e32a6b50a990fa3e3411d13537dc26_full.jpg",
+            image: "https://avatars.githubusercontent.com/u/90302291?v=4",
             quote: "Leading teams to success, one project at a time.",
             socials: {
                 discord: "https://discord.com/users/801162422580019220",
                 github: "https://github.com/b3ni15",
-                instagram: "https://instagram.com/ballobenedek"
+                steam: "https://steamcommunity.com/profiles/76561199512453336/"
             }
         },
         {
             name: "Domokos Ádám Péter",
             role: "Frontend Developer",
-            image: "https://avatars.fastly.steamstatic.com/9021b2164af271a8a3b3724f56f05c77f3e6abb2_full.jpg",
+            image: "https://avatars.githubusercontent.com/u/195280489?v=4",
             quote: "Passionate about creating seamless user experiences.",
             socials: {
                 discord: "https://discord.com/users/1006581830880874618",
                 github: "https://github.com/Breadman7180",
-                instagram: "https://instagram.com/domokosadam"
+                steam: "https://steamcommunity.com/id/krumplisteszta69"
             }
         },
         {
             name: "Meicher Zoltán",
             role: "Frontend Developer",
-            image: "https://cdn.discordapp.com/avatars/1015296418686189628/1ba17f8720108bac00f6fa44d5c0aa48.webp?size=128",
+            image: "https://avatars.githubusercontent.com/u/117442499?v=4",
             quote: "Turning ideas into interactive interfaces.",
             socials: {
                 discord: "https://discord.com/users/1015296418686189628",
-                github: "https://github.com/MZoltan7",
-                instagram: "https://instagram.com/meicherzoltan"
+                github: "https://github.com/MZoltan7"
             }
         }
     ], []);
