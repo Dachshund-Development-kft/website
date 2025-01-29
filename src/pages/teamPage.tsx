@@ -6,8 +6,7 @@ import FooterLayout from '../components/footerLayout';
 
 const TeamMember: React.FC<{ member: any }> = ({ member }) => {
     return (
-        <div
-            className="group relative bg-black bg-opacity-25 rounded-lg p-6 w-72 text-center flex-grow shadow-lg transform transition-all duration-300">
+        <div className="group relative bg-black bg-opacity-25 rounded-lg p-6 py-8 mt-8 w-72 text-center shadow-lg transform transition-all duration-300">
             <img 
                 src={member.image} 
                 alt={member.name} 
