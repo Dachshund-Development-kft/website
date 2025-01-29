@@ -57,7 +57,7 @@ const NavLayout: React.FC = () => {
             </div>
             <div className="lg:hidden ml-auto">
                 <button
-                    ref={menuButtonRef} // Assign ref to button
+                    ref={menuButtonRef}
                     onClick={() => setIsMenuOpen((prev) => !prev)}
                     className="text-white mr-4 mt-1"
                 >
@@ -65,7 +65,7 @@ const NavLayout: React.FC = () => {
                 </button>
             </div>
             <nav
-                ref={menuRef} // Assign ref to menu
+                ref={menuRef}
                 className={`lg:hidden flex flex-col items-start gap-3 p-4 fixed top-16 right-0 bg-[#1A1B22] max-w-max w-auto h-auto transition-all duration-300 transform ${
                     isMenuOpen ? 'translate-x-0' : 'translate-x-full'
                 } z-50`}
