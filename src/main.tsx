@@ -7,6 +7,7 @@ import {
 import MainPage from './pages/mainPage'
 import ProjectPage from './pages/projectPage'
 import TeamPage from './pages/teamPage'
+import ErrorPage from './pages/404Page'
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,18 @@ const router = createBrowserRouter([
   {
     path: '/team',
     element: <TeamPage />,
+  },
+  {
+    path: '/app',
+    element: <div>App</div>,
+  },
+  {
+    path: '/login',
+    element: <div>Login</div>,
+  },
+  {
+    path: '*',
+    element: <ErrorPage />,
   }
 ])
 
