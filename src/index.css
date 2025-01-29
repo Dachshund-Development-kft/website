@@ -17,9 +17,3 @@ body {
     font-size: large;
     overflow-x: hidden;
 }
-
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
