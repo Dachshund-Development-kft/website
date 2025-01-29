@@ -8,7 +8,7 @@ const ProjectPage: React.FC = () => {
         <div className="flex flex-col min-h-screen">
             <NavLayout />
             <main className="flex-grow items-center text-white">
-                <div className='flex flex-col items-center justify-center h-screen'>
+                <div className='flex flex-col items-center justify-center h-screen2'>
                     
                 </div>
             </main>

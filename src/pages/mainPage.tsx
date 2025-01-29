@@ -7,14 +7,14 @@ const MainPage: React.FC = () => {
     return (
         <div className="flex flex-col min-h-screen text-white">
             <NavLayout />
-            <main className="flex-grow items-center mt-24 md:mt-0">
+            <main className="flex-grow items-center mt-40 lg:mt-36 xl:mt-16 2xl:mt-10">
                 <div className="flex flex-col items-center justify-center h-screen">
                     <div className="flex flex-col md:flex-row items-center mb-10 ml-0 md:ml-24 space-y-6 md:space-y-0 md:mt-0">
                         <div className="relative w-full md:w-auto flex justify-center md:justify-start">
                             <img
                                 src="/mainPageLogo.svg"
                                 alt="Dachshund Logo"
-                                className="relative w-40 h-40 z-10" />
+                                className="relative w-52 h-52 lg:w-64 lg:h-64 2xl:w-80 2xl:h-80 z-10 md:mr-8 sm:mr-0" />
                         </div>
                         <div className="w-full md:w-auto flex flex-col text-center md:text-left pl-0 md:pl-2">
                             <h1 className="text-4xl font-bold bg-gradient-to-r from-[#5E78FF] to-[#384899] text-transparent bg-clip-text">

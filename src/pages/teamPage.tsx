@@ -6,8 +6,7 @@ import FooterLayout from '../components/footerLayout';
 
 const TeamMember: React.FC<{ member: any }> = ({ member }) => {
     return (
-        <div
-            className="group relative bg-black bg-opacity-25 rounded-lg p-6 w-72 text-center shadow-lg transform transition-all duration-300">
+        <div className="group relative bg-black bg-opacity-25 rounded-lg p-6 py-8 mt-8 w-72 text-center shadow-lg transform transition-all duration-300">
             <img 
                 src={member.image} 
                 alt={member.name} 
@@ -56,7 +55,7 @@ const TeamPage: React.FC = () => {
         {
             name: "Balló Benedek",
             role: "Project Manager",
-            image: "https://cdn.discordapp.com/avatars/801162422580019220/671dcf03377274db3494348e0ada8bab.webp?size=128",
+            image: "https://avatars.fastly.steamstatic.com/7bbb5afcc7e32a6b50a990fa3e3411d13537dc26_full.jpg",
             quote: "Leading teams to success, one project at a time.",
             socials: {
                 discord: "https://discord.com/users/801162422580019220",
@@ -67,7 +66,7 @@ const TeamPage: React.FC = () => {
         {
             name: "Domokos Ádám Péter",
             role: "Frontend Developer",
-            image: "https://cdn.discordapp.com/avatars/1006581830880874618/b5dc767a0c6f906903958cbc795303f9.webp?size=128",
+            image: "https://avatars.fastly.steamstatic.com/9021b2164af271a8a3b3724f56f05c77f3e6abb2_full.jpg",
             quote: "Passionate about creating seamless user experiences.",
             socials: {
                 discord: "https://discord.com/users/1006581830880874618",
