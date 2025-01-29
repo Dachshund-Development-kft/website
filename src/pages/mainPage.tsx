@@ -8,7 +8,7 @@ const MainPage: React.FC = () => {
         <>
             <NavLayout />
             <div className="flex flex-col min-h-screen text-white">
-                <main className="flex-grow items-center mt-24 md:mt-48">
+                <main className="flex-grow items-center sm:mt-24 md:mt-48">
                     <div className="flex flex-col items-center justify-center h-screen">
                         <div className="flex flex-col md:flex-row items-center mb-10 ml-0 md:ml-24 space-y-6 md:space-y-0 md:mt-0 gap-[50px]">
                             <div className="relative w-full md:w-auto flex justify-center md:justify-start">
