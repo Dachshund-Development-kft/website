@@ -7,9 +7,9 @@ const MainPage: React.FC = () => {
     return (
         <div className="flex flex-col min-h-screen text-white">
             <NavLayout />
-            <main className="flex-grow items-center mt-40 lg:mt-36 xl:mt-24">
+            <main className="flex-grow items-center mt-40 lg:mt-48 xl:mt-32">
                 <div className="flex flex-col items-center justify-center h-screen">
-                    <div className="flex flex-col md:flex-row items-center mb-10 ml-0 md:ml-24 space-y-6 md:space-y-0 md:mt-0">
+                    <div className="flex flex-col md:flex-row items-center mb-10 ml-0 md:ml-24 space-y-6 md:space-y-0 md:mt-0 md:mb-48">
                         <div className="relative w-full md:w-auto flex justify-center md:justify-start">
                             <img
                                 src="/mainPageLogo.svg"
