@@ -68,7 +68,7 @@ const ProjectPage: React.FC = () => {
                             <div className="mt-4">
                                 <p className="text-sm text-gray-300">{project.description}</p>
                                 <div className="flex items-center justify-center gap-2 text-sm mt-4">
-                                    <span>Done: {project.done ? '✅' : '❌'}</span>
+                                    <span className='text-sm text-gray-300'>Done: {project.done ? '✅' : '❌'}</span>
                                     <a
                                         href={project.github}
                                         target="_blank"
