@@ -42,17 +42,6 @@ const TeamMember: React.FC<{ member: any }> = ({ member }) => {
 const TeamPage: React.FC = () => {
     const teamMembers = useMemo(() => [
         {
-            name: "Guti Balázs",
-            role: "Frontend Developer",
-            image: "https://avatars.githubusercontent.com/u/98970569?v=4",
-            quote: "Striving for clean code and elegant designs.",
-            socials: {
-                discord: "https://discord.com/users/691581143669276692",
-                github: "https://github.com/baluka0013",
-                steam: "https://steamcommunity.com/id/LilKubikACreeperr"
-            }
-        },
-        {
             name: "Balló Benedek",
             role: "Project Manager",
             image: "https://avatars.githubusercontent.com/u/90302291?v=4",
@@ -64,8 +53,19 @@ const TeamPage: React.FC = () => {
             }
         },
         {
+            name: "Guti Balázs",
+            role: "Software Developer",
+            image: "https://avatars.githubusercontent.com/u/98970569?v=4",
+            quote: "Striving for clean code and elegant designs.",
+            socials: {
+                discord: "https://discord.com/users/691581143669276692",
+                github: "https://github.com/baluka0013",
+                steam: "https://steamcommunity.com/id/LilKubikACreeperr"
+            }
+        },
+        {
             name: "Domokos Ádám Péter",
-            role: "Frontend Developer",
+            role: "Software Developer",
             image: "https://avatars.githubusercontent.com/u/195280489?v=4",
             quote: "Passionate about creating seamless user experiences.",
             socials: {
@@ -76,7 +76,7 @@ const TeamPage: React.FC = () => {
         },
         {
             name: "Meicher Zoltán",
-            role: "Frontend Developer",
+            role: "Website Designer",
             image: "https://avatars.githubusercontent.com/u/117442499?v=4",
             quote: "Turning ideas into interactive interfaces.",
             socials: {
