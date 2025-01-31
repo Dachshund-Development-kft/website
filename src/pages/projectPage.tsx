@@ -5,7 +5,7 @@ import FooterLayout from '../components/footerLayout';
 
 const ProjectPage: React.FC = () => {
     return (
-        <div className="flex flex-col min-h-screen">
+        <div className="flex flex-col min-h-screen inset-0 bg-cover bg-center filter z-[-2] " style={{ backgroundImage: "url(/blobs.svg)" }}>
             <NavLayout />
             <main className="min-h-screen flex justify-center items-center">
                 <div className="flex flex-wrap justify-center gap-6 w-full max-w-screen-xl lg:pt-0 pt-16">
@@ -28,8 +28,8 @@ const ProjectPage: React.FC = () => {
                     </div>
                 </div>
             </main>
-            <FooterLayout />
             <Blobs />
+            <FooterLayout />
         </div>
     );
 };
