@@ -14,7 +14,7 @@ const MainPage: React.FC = () => {
                             <img
                                 src="/mainPageLogo.svg"
                                 alt="Dachshund Logo"
-                                className="relative w-52 h-52 lg:w-64 lg:h-64 2xl:w-80 2xl:h-80 z-10 md:mr-8 sm:mr-0 opacity-65 " />
+                                className="relative w-52 h-52 lg:w-64 lg:h-64 2xl:w-80 2xl:h-80 z-10 md:mr-8 sm:mr-0" />
                         </div>
                         <div className="w-full md:w-auto flex flex-col text-center md:text-left pl-0 md:pl-2">
                             <h1 className="text-4xl font-bold bg-gradient-to-r from-[#5E78FF] to-[#384899] text-transparent bg-clip-text">
