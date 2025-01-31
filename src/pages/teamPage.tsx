@@ -1,6 +1,5 @@
 import React, { useMemo } from 'react';
 import NavLayout from '../components/navLayout';
-import Blobs from '../components/blobsLayout';
 import { FaDiscord, FaGithub, FaSteam } from 'react-icons/fa';
 import FooterLayout from '../components/footerLayout';
 
@@ -90,7 +89,6 @@ const TeamPage: React.FC = () => {
         <>  
         <main className="flex flex-col min-h-screen inset-0 bg-cover bg-center filter z-[-2]" style={{ backgroundImage: "url(/blobs.svg)" }}>
             <NavLayout />
-            <Blobs />
             <div className="min-h-screen flex justify-center items-center">
                 <div className="flex flex-wrap justify-center gap-6 w-full max-w-screen-xl">
                     {teamMembers.map((member, index) => (

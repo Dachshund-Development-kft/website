@@ -1,12 +1,10 @@
 import React from 'react';
 import NavLayout from '../components/navLayout';
-import Blobs from '../components/blobsLayout';
 import FooterLayout from '../components/footerLayout';
 
 const MainPage: React.FC = () => {
     return (
         <div className="flex flex-col min-h-screen text-white inset-0 bg-cover bg-center filter z-[-2]" style={{ backgroundImage: "url(/blobs.svg)" }}>
-            <Blobs />
             <NavLayout />
             <main className="flex-grow items-center mt-40 lg:mt-64 xl:mt-72 2xl:mt-44 2xl:mb-48">
                 <div className="flex flex-col items-center justify-center h-screen">

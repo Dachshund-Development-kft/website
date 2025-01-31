@@ -1,5 +1,4 @@
 import React from 'react';
-import Blobs from '../components/blobsLayout';
 import NavLayout from '../components/navLayout';
 
 const ErrorPage: React.FC = () => {
@@ -17,7 +16,6 @@ const ErrorPage: React.FC = () => {
                         </p>
                     </div>
                 </main>
-                <Blobs />
             </main>
         </>
     );

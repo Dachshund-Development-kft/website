@@ -1,6 +1,5 @@
 import React from 'react';
 import NavLayout from '../components/navLayout';
-import Blobs from '../components/blobsLayout';
 import FooterLayout from '../components/footerLayout';
 
 const ProjectPage: React.FC = () => {
@@ -28,7 +27,6 @@ const ProjectPage: React.FC = () => {
                     </div>
                 </div>
             </main>
-            <Blobs />
             <FooterLayout />
         </div>
     );
