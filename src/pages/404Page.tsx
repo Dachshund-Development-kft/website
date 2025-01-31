@@ -4,7 +4,7 @@ import NavLayout from '../components/navLayout';
 const ErrorPage: React.FC = () => {
     return (
         <>
-            <main className="flex flex-col min-h-screen text-white inset-0 bg-cover bg-center filter z-[-2]" style={{ backgroundImage: "url(/blobs.svg)" }}>
+            <main className="flex flex-col min-h-screen text-white inset-0 bg-cover filter z-[-2]" style={{ backgroundImage: "url(/blobs.svg)" }}>
                 <NavLayout />
                 <main className="flex-grow items-center">
                     <div className="flex flex-col items-center justify-center h-screen text-center">
