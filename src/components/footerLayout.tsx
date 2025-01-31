@@ -3,7 +3,7 @@ import { FaGithub } from 'react-icons/fa';
 
 const FooterLayout: React.FC = () => {
   return (
-    <footer className="w-full relative z-10 mt-32">
+    <footer className="w-full relative z-10 mt-48">
       <img src="/footerPhone.svg" alt="Footer" className="w-full opacity-10 md:hidden block" />
       <img src="/footerDesktop.svg" alt="Footer" className="w-full opacity-10 hidden md:block" />
       <div className="absolute bottom-0 left-0 right-0 flex flex-col items-center justify-center py-4">

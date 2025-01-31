@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import NavLayout from '../components/navLayout';
-import Blobs from '../components/blobs';
+import Blobs from '../components/blobsLayout';
 import { FaDiscord, FaGithub, FaSteam } from 'react-icons/fa';
 import FooterLayout from '../components/footerLayout';
 

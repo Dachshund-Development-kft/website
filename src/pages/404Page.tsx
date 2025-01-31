@@ -1,5 +1,5 @@
 import React from 'react';
-import Blobs from '../components/blobs';
+import Blobs from '../components/blobsLayout';
 import NavLayout from '../components/navLayout';
 
 const ErrorPage: React.FC = () => {

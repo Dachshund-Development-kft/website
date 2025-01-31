@@ -7,8 +7,8 @@ const Blobs: React.FC = () => {
         setPageCenter(center);
     }, []);
     return (
-        <>
-            <div className="hidden md:block">
+        <> 
+             <div className="hidden md:block">
                 <div className='overflow-hidden'>
                     <img
                         src="./blob.svg"
@@ -49,9 +49,7 @@ const Blobs: React.FC = () => {
                         style={{ top: `${pageCenter+pageCenter-80}px`, }}
                     />
                 </div>
-            </div>
-
-
+            </div>  
         </>
     );
 };
