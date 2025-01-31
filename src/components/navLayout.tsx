@@ -119,7 +119,7 @@ const NavLayout: React.FC = () => {
             </nav>
             <div className="hidden lg:flex items-center">
                 <button className="bg-[#0F1015] text-white px-4 py-2 rounded-md shadow-lg hover:bg-gray-700 flex items-center gap-2 transition-all duration-300">
-                    <FaGithub /> Login
+                    Login
                 </button>
             </div>
         </div>
