@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { HiMiniHome } from "react-icons/hi2";
-import { FaDiagramProject } from "react-icons/fa6";
 import { HiUserAdd } from "react-icons/hi";
 import { FaGithub } from 'react-icons/fa';
 import { HiOutlineMenu } from "react-icons/hi";
+import { IoStatsChart } from "react-icons/io5";
 
 const NavLayout: React.FC = () => {
     const location = useLocation();
@@ -14,7 +14,7 @@ const NavLayout: React.FC = () => {
 
     const navItems = [
         { path: "/", icon: <HiMiniHome />, label: "Home" },
-        { path: "/projects", icon: <FaDiagramProject />, label: "Projects" },
+        { path: "/statistic", icon: <IoStatsChart />, label: "Statistic" },
         { path: "/team", icon: <HiUserAdd />, label: "Team" },
     ];
 

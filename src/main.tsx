@@ -5,7 +5,7 @@ import {
   RouterProvider,
 } from 'react-router-dom'
 import MainPage from './pages/mainPage'
-import ProjectPage from './pages/projectPage'
+import StatisticPage from './pages/statisticPage'
 import TeamPage from './pages/teamPage'
 import ErrorPage from './pages/404Page'
 
@@ -15,8 +15,8 @@ const router = createBrowserRouter([
     element: <MainPage />,
   },
   {
-    path: '/projects',
-    element: <ProjectPage />,
+    path: '/statistic',
+    element: <StatisticPage />,
   }, 
   {
     path: '/team',

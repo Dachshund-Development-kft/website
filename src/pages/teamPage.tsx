@@ -5,19 +5,18 @@ import FooterLayout from '../components/footerLayout';
 
 const TeamMember: React.FC<{ member: any }> = ({ member }) => {
     return (
-        <div className="group relative bg-black bg-opacity-25 rounded-lg p-6 py-8 mt-8 w-72 text-center shadow-lg transform transition-all duration-300">
-            <img 
-                src={member.image} 
-                alt={member.name} 
-                className="w-32 h-32 mx-auto rounded-full mb-4" 
-                loading="lazy"  
+        <div className="group relative bg-black bg-opacity-30 rounded-2xl p-8 w-80 text-center shadow-xl transform transition-all duration-300 hover:scale-105">
+            <img
+                src={member.image}
+                alt={member.name}
+                className="w-32 h-32 mx-auto rounded-full mb-4 border-4 border-white shadow-md"
+                loading="lazy"
             />
-            <h2 className="text-xl font-bold mb-2 text-white">{member.name}</h2>
-            <span className="inline-block bg-blue-500 text-white px-3 py-1 rounded-full text-sm">
+            <h2 className="text-2xl font-bold mb-2 text-white">{member.name}</h2>
+            <span className="inline-block bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
                 {member.role}
             </span>
-
-            <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center bg-black bg-opacity-80 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 rounded-lg pointer-events-none">
+            <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center bg-black bg-opacity-80 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-6 rounded-2xl">
                 <p className="mb-4 italic">"{member.quote}"</p>
                 <div className="flex gap-4">
                     {Object.entries(member.socials).map(([key, url]) => (
@@ -26,7 +25,7 @@ const TeamMember: React.FC<{ member: any }> = ({ member }) => {
                             href={url as string}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-blue-500 hover:text-blue-400 pointer-events-auto">
+                            className="text-blue-500 hover:text-blue-400">
                             {key === 'discord' && <FaDiscord size={24} />}
                             {key === 'github' && <FaGithub size={24} />}
                             {key === 'steam' && <FaSteam size={24} />}
@@ -86,11 +85,11 @@ const TeamPage: React.FC = () => {
     ], []);
 
     return (
-        <>  
-        <main className="flex flex-col min-h-screen inset-0 bg-cover filter z-[-2] bg-repeat-y" style={{ backgroundImage: "url(/blobs.svg)" }}>
+        <main className="flex flex-col min-h-screen bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url(/blobs.svg)" }}>
             <NavLayout />
-            <div className="min-h-screen flex justify-center items-center">
-                <div className="flex flex-wrap justify-center gap-6 w-full max-w-screen-xl">
+            <div className="flex flex-col items-center py-16 px-4">
+                <h1 className="text-white text-5xl font-bold mb-12 text-center">Meet the Team</h1>
+                <div className="flex flex-wrap justify-center gap-6 w-full max-w-screen-xl mt-16">
                     {teamMembers.map((member, index) => (
                         <TeamMember key={index} member={member} />
                     ))}
@@ -98,8 +97,6 @@ const TeamPage: React.FC = () => {
             </div>
             <FooterLayout />
         </main>
-            
-        </>
     );
 };
 
