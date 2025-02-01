@@ -5,6 +5,7 @@ import { HiUserAdd } from "react-icons/hi";
 import { FaGithub } from 'react-icons/fa';
 import { HiOutlineMenu } from "react-icons/hi";
 import { IoStatsChart } from "react-icons/io5";
+import login from '../api/login';
 
 const NavLayout: React.FC = () => {
     const location = useLocation();
@@ -17,6 +18,10 @@ const NavLayout: React.FC = () => {
         { path: "/statistic", icon: <IoStatsChart />, label: "Statistic" },
         { path: "/team", icon: <HiUserAdd />, label: "Team" },
     ];
+
+    const handleLogin = async () => {
+        await login('ballobenedek', 'A4F7AC90');
+    };
 
     useEffect(() => {
         function handleClickOutside(event: MouseEvent) {
@@ -118,7 +123,7 @@ const NavLayout: React.FC = () => {
                 </div>
             </nav>
             <div className="hidden lg:flex items-center">
-                <button className="bg-[#0F1015] text-white px-4 py-2 rounded-md shadow-lg hover:bg-gray-700 flex items-center gap-2 transition-all duration-300">
+                <button className="bg-[#0F1015] text-white px-4 py-2 rounded-md shadow-lg hover:bg-gray-700 flex items-center gap-2 transition-all duration-300" onClick={handleLogin}>
                     Login
                 </button>
             </div>
