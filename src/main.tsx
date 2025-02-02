@@ -28,6 +28,10 @@ const router = createBrowserRouter([
     element: <LoginPage />,
   },
   {
+    path: '/dashboard',
+    element: <p>Sigma</p>,
+  },
+  {
     path: '*',
     element: <ErrorPage />,
   }
