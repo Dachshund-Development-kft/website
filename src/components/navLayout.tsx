@@ -18,10 +18,6 @@ const NavLayout: React.FC = () => {
         { path: "/team", icon: <HiUserAdd />, label: "Csapat" },
     ];
 
-    const handleLogin = async () => {
-        //await login('ballobenedek', 'A4F7AC90');
-    };
-
     useEffect(() => {
         function handleClickOutside(event: MouseEvent) {
             if (
@@ -122,9 +118,9 @@ const NavLayout: React.FC = () => {
                 </div>
             </nav>
             <div className="hidden lg:flex items-center">
-                <button className="bg-[#0F1015] text-white px-4 py-2 rounded-md shadow-lg hover:bg-gray-700 flex items-center gap-2 transition-all duration-300" onClick={handleLogin}>
+                <a className="bg-[#0F1015] text-white px-4 py-2 rounded-md shadow-lg hover:bg-gray-700 flex items-center gap-2 transition-all duration-300" href='/login'>
                     Bejelentkezés
-                </button>
+                </a>
             </div>
         </div>
     );

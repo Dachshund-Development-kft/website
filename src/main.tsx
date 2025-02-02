@@ -8,6 +8,7 @@ import MainPage from './pages/mainPage'
 import StatisticPage from './pages/statisticPage'
 import TeamPage from './pages/teamPage'
 import ErrorPage from './pages/404Page'
+import LoginPage from './pages/loginPage'
 
 const router = createBrowserRouter([
   {
@@ -23,12 +24,8 @@ const router = createBrowserRouter([
     element: <TeamPage />,
   },
   {
-    path: '/app',
-    element: <div>App</div>,
-  },
-  {
     path: '/login',
-    element: <div>Login</div>,
+    element: <LoginPage />,
   },
   {
     path: '*',
