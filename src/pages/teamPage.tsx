@@ -41,7 +41,7 @@ const TeamPage: React.FC = () => {
     const teamMembers = useMemo(() => [
         {
             name: "Balló Benedek",
-            role: "Project Manager",
+            role: "Projektvezető",
             image: "https://avatars.githubusercontent.com/u/90302291?v=4",
             quote: "Leading teams to success, one project at a time.",
             socials: {
@@ -52,7 +52,7 @@ const TeamPage: React.FC = () => {
         },
         {
             name: "Guti Balázs",
-            role: "Software Developer",
+            role: "Szoftverfejlesztő",
             image: "https://avatars.githubusercontent.com/u/98970569?v=4",
             quote: "Striving for clean code and elegant designs.",
             socials: {
@@ -63,7 +63,7 @@ const TeamPage: React.FC = () => {
         },
         {
             name: "Domokos Ádám Péter",
-            role: "Software Developer",
+            role: "Szoftverfejlesztő",
             image: "https://avatars.githubusercontent.com/u/195280489?v=4",
             quote: "Passionate about creating seamless user experiences.",
             socials: {
@@ -74,7 +74,7 @@ const TeamPage: React.FC = () => {
         },
         {
             name: "Meicher Zoltán",
-            role: "Website Designer",
+            role: "Webfejlesztő",
             image: "https://avatars.githubusercontent.com/u/117442499?v=4",
             quote: "Turning ideas into interactive interfaces.",
             socials: {
@@ -88,7 +88,7 @@ const TeamPage: React.FC = () => {
         <main className="flex flex-col min-h-screen bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url(/blobs.svg)" }}>
             <NavLayout />
             <div className="flex flex-col items-center py-16 px-4">
-                <h1 className="text-white text-5xl font-bold mb-12 text-center">Meet the Team</h1>
+                <h1 className="text-white text-5xl font-bold mb-12 text-center">Csapatunk</h1>
                 <div className="flex flex-wrap justify-center gap-6 w-full max-w-screen-xl mt-16">
                     {teamMembers.map((member, index) => (
                         <TeamMember key={index} member={member} />

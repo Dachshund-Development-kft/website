@@ -21,9 +21,9 @@ const StatisticPage: React.FC = () => {
     }, []);
 
     const stats = [
-        { title: "Work Here", description: "The number of team members", value: 4 },
-        { title: "Total Points", description: "The total amount of points", value: points },
-        { title: "Tasks", description: "The total number of completed tasks", value: tasks }
+        { title: "Dolgozók", description: "", value: 4 },
+        { title: "Pontjaink", description: "", value: points },
+        { title: "Feladatok", description: "", value: tasks }
     ];
 
     return (

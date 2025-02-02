@@ -13,9 +13,9 @@ const NavLayout: React.FC = () => {
     const menuButtonRef = useRef<HTMLButtonElement>(null);
 
     const navItems = [
-        { path: "/", icon: <HiMiniHome />, label: "Home" },
-        { path: "/statistic", icon: <IoStatsChart />, label: "Statistic" },
-        { path: "/team", icon: <HiUserAdd />, label: "Team" },
+        { path: "/", icon: <HiMiniHome />, label: "Főoldal" },
+        { path: "/statistic", icon: <IoStatsChart />, label: "Statisztika" },
+        { path: "/team", icon: <HiUserAdd />, label: "Csapat" },
     ];
 
     const handleLogin = async () => {
@@ -123,7 +123,7 @@ const NavLayout: React.FC = () => {
             </nav>
             <div className="hidden lg:flex items-center">
                 <button className="bg-[#0F1015] text-white px-4 py-2 rounded-md shadow-lg hover:bg-gray-700 flex items-center gap-2 transition-all duration-300" onClick={handleLogin}>
-                    Login
+                    Bejelentkezés
                 </button>
             </div>
         </div>
