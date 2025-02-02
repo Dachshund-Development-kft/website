@@ -5,12 +5,14 @@ import { HiUserAdd } from "react-icons/hi";
 import { FaGithub } from 'react-icons/fa';
 import { HiOutlineMenu } from "react-icons/hi";
 import { IoStatsChart } from "react-icons/io5";
+import getUser from '../api/getUser';
 
 const NavLayout: React.FC = () => {
     const location = useLocation();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const menuRef = useRef<HTMLDivElement>(null);
     const menuButtonRef = useRef<HTMLButtonElement>(null);
+    const [user, setUser] = useState<any>(null);
 
     const navItems = [
         { path: "/", icon: <HiMiniHome />, label: "Főoldal" },
@@ -19,6 +21,16 @@ const NavLayout: React.FC = () => {
     ];
 
     useEffect(() => {
+        const checkUser = async () => {
+            const success = await getUser();
+
+            if (success) {
+                setUser(true);
+            }
+        };
+
+        checkUser();
+
         function handleClickOutside(event: MouseEvent) {
             if (
                 menuRef.current &&
@@ -66,9 +78,8 @@ const NavLayout: React.FC = () => {
             </div>
             <nav
                 ref={menuRef}
-                className={`lg:hidden flex flex-col items-start gap-3 p-4 fixed top-16 right-0 bg-[#1A1B22] max-w-max w-auto h-auto transition-all duration-300 transform ${
-                    isMenuOpen ? 'translate-x-0' : 'translate-x-full'
-                } z-50`}
+                className={`lg:hidden flex flex-col items-start gap-3 p-4 fixed top-16 right-0 bg-[#1A1B22] max-w-max w-auto h-auto transition-all duration-300 transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+                    } z-50`}
             >
                 <div className="flex flex-col items-start gap-2">
                     {navItems.map((item, index) => {
@@ -80,9 +91,8 @@ const NavLayout: React.FC = () => {
                                 </Link>
                                 <Link
                                     to={item.path}
-                                    className={`text-white ml-1 relative after:content-[''] after:absolute after:left-0 after:bottom-[-2px] after:h-[2px] after:bg-white after:w-0 after:transition-all after:duration-300 ${
-                                        isActive ? "after:w-full" : "hover:after:w-full after:opacity-100"
-                                    }`}
+                                    className={`text-white ml-1 relative after:content-[''] after:absolute after:left-0 after:bottom-[-2px] after:h-[2px] after:bg-white after:w-0 after:transition-all after:duration-300 ${isActive ? "after:w-full" : "hover:after:w-full after:opacity-100"
+                                        }`}
                                 >
                                     {item.label}
                                 </Link>
@@ -106,9 +116,8 @@ const NavLayout: React.FC = () => {
                                 </Link>
                                 <Link
                                     to={item.path}
-                                    className={`text-white ml-1 relative after:content-[''] after:absolute after:left-0 after:bottom-[-2px] after:h-[2px] after:bg-white after:w-0 after:transition-all after:duration-300 ${
-                                        isActive ? "after:w-full" : "hover:after:w-full after:opacity-100"
-                                    }`}
+                                    className={`text-white ml-1 relative after:content-[''] after:absolute after:left-0 after:bottom-[-2px] after:h-[2px] after:bg-white after:w-0 after:transition-all after:duration-300 ${isActive ? "after:w-full" : "hover:after:w-full after:opacity-100"
+                                        }`}
                                 >
                                     {item.label}
                                 </Link>
@@ -118,9 +127,16 @@ const NavLayout: React.FC = () => {
                 </div>
             </nav>
             <div className="hidden lg:flex items-center">
-                <a className="bg-[#0F1015] text-white px-4 py-2 rounded-md shadow-lg hover:bg-gray-700 flex items-center gap-2 transition-all duration-300" href='/login'>
-                    Bejelentkezés
-                </a>
+                {user ? (
+
+                    <a className="bg-[#0F1015] text-white px-4 py-2 rounded-md shadow-lg hover:bg-gray-700 flex items-center gap-2 transition-all duration-300" href='/dashboard'>
+                        Dashboard
+                    </a>
+                ) : (
+                    <a className="bg-[#0F1015] text-white px-4 py-2 rounded-md shadow-lg hover:bg-gray-700 flex items-center gap-2 transition-all duration-300" href='/login'>
+                        Bejelentkezés
+                    </a>
+                )}
             </div>
         </div>
     );

@@ -4,15 +4,21 @@ import FooterLayout from '../components/footerLayout';
 import { FaUser, FaLock } from 'react-icons/fa';
 import login from '../api/login';
 import { ToastContainer, toast, Bounce } from 'react-toastify';
-import getToken from '../api/chenkToken';
+import getUser from '../api/getUser';
 
 const LoginPage: React.FC = () => {
     const toastId = React.useRef<null | ReturnType<typeof toast.info>>(null);
 
     useEffect(() => {
-        if (getToken()) {
-            window.location.href = '/';
-        }
+        const checkUser = async () => {
+            const success = await getUser();
+
+            if (success) {
+                window.location.href = '/';
+            }
+        };
+
+        checkUser();
     }, []);
 
     const handleSubmit = async (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
@@ -41,7 +47,7 @@ const LoginPage: React.FC = () => {
             update();
 
             setTimeout(() => {
-                window.location.href = '/dashboard';
+                window.location.href = '/';
             }, 2000);
         } else {
             const update = () => {
