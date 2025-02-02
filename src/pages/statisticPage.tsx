@@ -1,8 +1,31 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import NavLayout from '../components/navLayout';
 import FooterLayout from '../components/footerLayout';
+import getStats from '../api/stats';
 
 const StatisticPage: React.FC = () => {
+    const [points, setPoints] = useState<number>(0);
+    const [tasks, setTasks] = useState<number>(0);
+
+    useEffect(() => {
+        getStats().then(async data => {
+            setPoints(data.data.points);
+
+            let completedTasks = 0;
+            data.data.tasks.forEach(() => {
+                completedTasks++;
+            });
+
+            setTasks(completedTasks);
+        });
+    }, []);
+
+    const stats = [
+        { title: "Work Here", description: "The number of team members", value: 4 },
+        { title: "Total Points", description: "The total amount of points", value: points },
+        { title: "Tasks", description: "The total number of completed tasks", value: tasks }
+    ];
+
     return (
         <div className="flex flex-col min-h-screen bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url(/blobs.svg)" }}>
             <NavLayout />
@@ -22,11 +45,5 @@ const StatisticPage: React.FC = () => {
         </div>
     );
 };
-
-const stats = [
-    { title: "Work Here", description: "The number of team members", value: 4 },
-    { title: "Total Points", description: "The total amount of points", value: 0 },
-    { title: "Completed Tasks", description: "The total number of completed tasks", value: 0 }
-];
 
 export default StatisticPage;
