@@ -5,7 +5,6 @@ import { HiUserAdd } from "react-icons/hi";
 import { FaGithub } from 'react-icons/fa';
 import { HiOutlineMenu } from "react-icons/hi";
 import { IoStatsChart } from "react-icons/io5";
-import login from '../api/login';
 
 const NavLayout: React.FC = () => {
     const location = useLocation();
@@ -20,7 +19,7 @@ const NavLayout: React.FC = () => {
     ];
 
     const handleLogin = async () => {
-        await login('ballobenedek', 'A4F7AC90');
+        //await login('ballobenedek', 'A4F7AC90');
     };
 
     useEffect(() => {
