@@ -174,11 +174,11 @@
 @keyframes moveBg2 {
     from {
         transform: translateY(0);
-        transform: translateX(-400px);
+        transform: translateX(-250px);
     }
     to {
         transform: translateY(0);
-        transform: translateX(2600px);
+        transform: translateX(2750px);
     }
 }
 
