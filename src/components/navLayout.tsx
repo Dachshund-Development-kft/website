@@ -99,7 +99,7 @@ const NavLayout: React.FC = () => {
                         );
                     })}
                 </div>
-                <button className="bg-[#0F1015] text-white px-4 py-2 rounded-md shadow-lg hover:bg-gray-700 flex items-center gap-2 transition-all duration-300 w-full mt-2">
+                <button className=" flex items-center gap-2 transition-all duration-300 w-full mt-2">
                     {user ? (
                         <a className="bg-[#0F1015] text-white px-4 py-2 rounded-md shadow-lg hover:bg-gray-700 flex items-center gap-2 transition-all duration-300" href='/dashboard'>
                             Dashboard
