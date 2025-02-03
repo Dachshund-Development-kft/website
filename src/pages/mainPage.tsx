@@ -10,7 +10,7 @@ const MainPage: React.FC = () => {
         <div className="flex flex-col min-h-screen text-white inset-0 bg-cover filter z-[-2] bg-repeat-y" style={{ backgroundImage: "url(/blobs.svg)" }}>
             <NavLayout />
             <main className="flex-grow items-center mt-96 lg:mt-96 xl:mt-96 2xl:mt-80 2xl:mb-48 mb-20 lg:mb-0">
-                <div className="flex flex-col items-center mt-36 justify-center h-screen">
+                <div className="flex flex-col items-center mt-80 justify-center h-screen">
                     <div className="flex flex-col md:flex-row items-center mb-10 ml-0 md:ml-24 space-y-6 md:space-y-0 md:mt-0 lg:mb-48">
                         <div className="relative w-full md:w-auto flex justify-center md:justify-start">
                             <img
@@ -51,7 +51,7 @@ const MainPage: React.FC = () => {
                             Hiszünk abban, hogy az informatika az innováció és a fejlődés kulcsa. Fedezzük fel együtt a digitális lehetőségeket!
                         </p>
                     </div>
-                    <div id='scroll' className="text-center mb-52 block lg:hidden" style={{ width: "100%"}}>
+                    <div id='scroll' className="text-center mb-96 block lg:hidden" style={{ width: "100%"}}>
                         <h2 className="text-4xl font-bold bg-gradient-to-r from-[#5E78FF] to-[#384899] text-transparent bg-clip-text my-10">Partnereink</h2>
                         <div className="relative w-full h-96 overflow-hidden">
                         {partnersMobile.map((partner, index) => (
