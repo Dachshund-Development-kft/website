@@ -15,19 +15,9 @@
         "url": "https://ceg.projekt9.hu/javacrafters/"
     },
     {
-        "name": "NovaScript",
-        "logo": "https://ceg.projekt9.hu/novascript/img/logo.svg",
-        "url": "https://ceg.projekt9.hu/novascript/"
-    },
-    {
-        "name": "Sigma-Solutions",
-        "logo": "https://ceg.projekt9.hu/sigmasolutions/img/logo.svg",
-        "url": "https://ceg.projekt9.hu/sigmasolutions/"
-    },
-    {
-        "name": "Java Crafters",
-        "logo": "https://ceg.projekt9.hu/javacrafters/img/logo.svg",
-        "url": "https://ceg.projekt9.hu/javacrafters/"
+        "name": "Future Script",
+        "logo": "https://ceg.projekt9.hu/futurescript/img/logo.svg",
+        "url": "https://ceg.projekt9.hu/futurescript/"
     },
     {
         "name": "NovaScript",
@@ -45,19 +35,9 @@
         "url": "https://ceg.projekt9.hu/javacrafters/"
     },
     {
-        "name": "NovaScript",
-        "logo": "https://ceg.projekt9.hu/novascript/img/logo.svg",
-        "url": "https://ceg.projekt9.hu/novascript/"
-    },
-    {
-        "name": "Sigma-Solutions",
-        "logo": "https://ceg.projekt9.hu/sigmasolutions/img/logo.svg",
-        "url": "https://ceg.projekt9.hu/sigmasolutions/"
-    },
-    {
-        "name": "Java Crafters",
-        "logo": "https://ceg.projekt9.hu/javacrafters/img/logo.svg",
-        "url": "https://ceg.projekt9.hu/javacrafters/"
+        "name": "Future Script",
+        "logo": "https://ceg.projekt9.hu/futurescript/img/logo.svg",
+        "url": "https://ceg.projekt9.hu/futurescript/"
     },
     {
         "name": "NovaScript",
@@ -75,19 +55,9 @@
         "url": "https://ceg.projekt9.hu/javacrafters/"
     },
     {
-        "name": "NovaScript",
-        "logo": "https://ceg.projekt9.hu/novascript/img/logo.svg",
-        "url": "https://ceg.projekt9.hu/novascript/"
-    },
-    {
-        "name": "Sigma-Solutions",
-        "logo": "https://ceg.projekt9.hu/sigmasolutions/img/logo.svg",
-        "url": "https://ceg.projekt9.hu/sigmasolutions/"
-    },
-    {
-        "name": "Java Crafters",
-        "logo": "https://ceg.projekt9.hu/javacrafters/img/logo.svg",
-        "url": "https://ceg.projekt9.hu/javacrafters/"
+        "name": "Future Script",
+        "logo": "https://ceg.projekt9.hu/futurescript/img/logo.svg",
+        "url": "https://ceg.projekt9.hu/futurescript/"
     },
     {
         "name": "NovaScript",
@@ -105,6 +75,11 @@
         "url": "https://ceg.projekt9.hu/javacrafters/"
     },
     {
+        "name": "Future Script",
+        "logo": "https://ceg.projekt9.hu/futurescript/img/logo.svg",
+        "url": "https://ceg.projekt9.hu/futurescript/"
+    },
+    {
         "name": "NovaScript",
         "logo": "https://ceg.projekt9.hu/novascript/img/logo.svg",
         "url": "https://ceg.projekt9.hu/novascript/"
@@ -118,5 +93,65 @@
         "name": "Java Crafters",
         "logo": "https://ceg.projekt9.hu/javacrafters/img/logo.svg",
         "url": "https://ceg.projekt9.hu/javacrafters/"
+    },
+    {
+        "name": "Future Script",
+        "logo": "https://ceg.projekt9.hu/futurescript/img/logo.svg",
+        "url": "https://ceg.projekt9.hu/futurescript/"
+    },
+    {
+        "name": "NovaScript",
+        "logo": "https://ceg.projekt9.hu/novascript/img/logo.svg",
+        "url": "https://ceg.projekt9.hu/novascript/"
+    },
+    {
+        "name": "Sigma-Solutions",
+        "logo": "https://ceg.projekt9.hu/sigmasolutions/img/logo.svg",
+        "url": "https://ceg.projekt9.hu/sigmasolutions/"
+    },
+    {
+        "name": "Java Crafters",
+        "logo": "https://ceg.projekt9.hu/javacrafters/img/logo.svg",
+        "url": "https://ceg.projekt9.hu/javacrafters/"
+    },
+    {
+        "name": "Future Script",
+        "logo": "https://ceg.projekt9.hu/futurescript/img/logo.svg",
+        "url": "https://ceg.projekt9.hu/futurescript/"
+    },
+    {
+        "name": "NovaScript",
+        "logo": "https://ceg.projekt9.hu/novascript/img/logo.svg",
+        "url": "https://ceg.projekt9.hu/novascript/"
+    },
+    {
+        "name": "Sigma-Solutions",
+        "logo": "https://ceg.projekt9.hu/sigmasolutions/img/logo.svg",
+        "url": "https://ceg.projekt9.hu/sigmasolutions/"
+    },
+    {
+        "name": "Java Crafters",
+        "logo": "https://ceg.projekt9.hu/javacrafters/img/logo.svg",
+        "url": "https://ceg.projekt9.hu/javacrafters/"
+    },
+    {
+        "name": "Future Script",
+        "logo": "https://ceg.projekt9.hu/futurescript/img/logo.svg",
+        "url": "https://ceg.projekt9.hu/futurescript/"
+    },
+    {
+        "name": "Sigma-Solutions",
+        "logo": "https://ceg.projekt9.hu/sigmasolutions/img/logo.svg",
+        "url": "https://ceg.projekt9.hu/sigmasolutions/"
+    },
+    {
+        "name": "Java Crafters",
+        "logo": "https://ceg.projekt9.hu/javacrafters/img/logo.svg",
+        "url": "https://ceg.projekt9.hu/javacrafters/"
+    },
+    {
+        "name": "Future Script",
+        "logo": "https://ceg.projekt9.hu/futurescript/img/logo.svg",
+        "url": "https://ceg.projekt9.hu/futurescript/"
     }
 ]
