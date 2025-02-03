@@ -7,66 +7,66 @@
 
 .footer_bg1 {
     transform: translateY(-1500px);
-    animation: moveBg2 18s linear infinite;
+    animation: moveBg2 54s linear infinite;
     animation-delay: 0s; /* Starts immediately */
 }
 
 .footer_bg2 {
     transform: translateY(-1500px);
-    animation: moveBg2 18s linear infinite;
-    animation-delay: 1.5s; /* Starts after 2 seconds */
+    animation: moveBg2 54s linear infinite;
+    animation-delay: 4.5s; /* Starts after 2 seconds */
 }
 
 .footer_bg3 {
     transform: translateY(-1500px);
-    animation: moveBg2 18s linear infinite;
-    animation-delay: 3s; /* Starts after 4 seconds */
+    animation: moveBg2 54s linear infinite;
+    animation-delay: 9s; /* Starts after 4 seconds */
 }
 
 .footer_bg4 {
     transform: translateY(-1500px);
-    animation: moveBg2 18s linear infinite;
-    animation-delay: 4.5s; /* Starts after 6 seconds */
+    animation: moveBg2 54s linear infinite;
+    animation-delay: 13.5s; /* Starts after 6 seconds */
 }
 .footer_bg5 {
     transform: translateY(-1500px);
-    animation: moveBg2 18s linear infinite;
-    animation-delay: 6s; /* Starts after 8 seconds */
+    animation: moveBg2 54s linear infinite;
+    animation-delay: 18s; /* Starts after 8 seconds */
 }
 .footer_bg6 {
     transform: translateY(-1500px);
-    animation: moveBg2 18s linear infinite;
-    animation-delay: 7.5s; /* Starts after 10 seconds */
+    animation: moveBg2 54s linear infinite;
+    animation-delay: 22.5s; /* Starts after 10 seconds */
 }
 .footer_bg7 {
     transform: translateY(-1500px);
-    animation: moveBg2 18s linear infinite;
-    animation-delay: 9s; /* Starts after 12 seconds */
+    animation: moveBg2 54s linear infinite;
+    animation-delay: 27s; /* Starts after 12 seconds */
 }
 .footer_bg8 {
     transform: translateY(-1500px);
-    animation: moveBg2 18s linear infinite;
-    animation-delay: 10.5s; /* Starts after 14 seconds */
+    animation: moveBg2 54s linear infinite;
+    animation-delay: 31.5s; /* Starts after 14 seconds */
 }
 .footer_bg9 {
     transform: translateY(-1500px);
-    animation: moveBg2 18s linear infinite;
-    animation-delay: 12s; /* Starts after 16 seconds */
+    animation: moveBg2 54s linear infinite;
+    animation-delay: 36s; /* Starts after 16 seconds */
 }
 .footer_bg10 {
     transform: translateY(-1500px);
-    animation: moveBg2 18s linear infinite;
-    animation-delay: 13.5s; /* Starts after 18 seconds */
+    animation: moveBg2 54s linear infinite;
+    animation-delay: 40.5s; /* Starts after 18 seconds */
 }
 .footer_bg11 {
     transform: translateY(-1500px);
-    animation: moveBg2 18s linear infinite;
-    animation-delay: 15s; /* Starts after 20 seconds */
+    animation: moveBg2 54s linear infinite;
+    animation-delay: 45s; /* Starts after 20 seconds */
 }
 .footer_bg12 {
     transform: translateY(-1500px);
-    animation: moveBg2 18s linear infinite;
-    animation-delay: 16.5s; /* Starts after 22 seconds */
+    animation: moveBg2 54s linear infinite;
+    animation-delay: 49.5s; /* Starts after 22 seconds */
 }
 
 
