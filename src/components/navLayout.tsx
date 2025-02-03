@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { HiMiniHome } from "react-icons/hi2";
 import { HiUserAdd } from "react-icons/hi";
-import { FaGithub } from 'react-icons/fa';
 import { HiOutlineMenu } from "react-icons/hi";
 import { IoStatsChart } from "react-icons/io5";
 import getUser from '../api/getUser';
@@ -101,7 +100,15 @@ const NavLayout: React.FC = () => {
                     })}
                 </div>
                 <button className="bg-[#0F1015] text-white px-4 py-2 rounded-md shadow-lg hover:bg-gray-700 flex items-center gap-2 transition-all duration-300 w-full mt-2">
-                    <FaGithub /> Login
+                    {user ? (
+                        <a className="bg-[#0F1015] text-white px-4 py-2 rounded-md shadow-lg hover:bg-gray-700 flex items-center gap-2 transition-all duration-300" href='/dashboard'>
+                            Dashboard
+                        </a>
+                    ) : (
+                        <a className="bg-[#0F1015] text-white px-4 py-2 rounded-md shadow-lg hover:bg-gray-700 flex items-center gap-2 transition-all duration-300" href='/login'>
+                            Bejelentkezés
+                        </a>
+                    )}
                 </button>
             </nav>
 
