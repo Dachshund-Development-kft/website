@@ -15,7 +15,9 @@ const getUser = async () => {
             }
         });
 
-        if (response.data.code === 200) {
+        console.log(response.data.success);
+
+        if (response.data.success) {
             return true;
         } else {
             localStorage.removeItem('token');
