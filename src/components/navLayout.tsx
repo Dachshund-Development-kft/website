@@ -77,7 +77,7 @@ const NavLayout: React.FC = () => {
             </div>
             <nav
                 ref={menuRef}
-                className={`lg:hidden flex flex-col items-start gap-3 p-4 fixed top-16 right-0 bg-[#1A1B22] max-w-max w-auto h-auto transition-all duration-300 transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+                className={`lg:hidden flex flex-col items-start gap-3 p-4 fixed top-16 right-0 rounded-lg bg-[#1A1B22] max-w-max w-auto h-auto transition-all duration-300 transform ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'
                     } z-50`}
             >
                 <div className="flex flex-col items-start gap-2">
