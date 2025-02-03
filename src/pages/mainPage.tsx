@@ -57,9 +57,9 @@ const MainPage: React.FC = () => {
                         {partnersMobile.map((partner, index) => (
                                 <div key={index} className={`footer-bg footer_bg${index + 1} footerphone`}>
                                     <a href={partner.url}>
-                                        <div className="max-w-56 rounded-2xl overflow-hidden shadow-lg bg-[#291E7C] bg-opacity-50">
+                                        <div className="max-w-56 rounded-2xl overflow-hidden shadow-lg bg-black bg-opacity-30">
                                             <div className='m-8'>
-                                                <img className="w-full" src={partner.logo} alt={partner.name} />
+                                                <img className="w-full h-40" src={partner.logo} alt={partner.name} />
                                             </div>
                                             <div className="px-6 py-4">
                                                 <div className="font-bold text-xl mb-2">{partner.name}</div>
@@ -76,7 +76,7 @@ const MainPage: React.FC = () => {
                             {partnersDesktop.map((partner, index) => (
                                 <div key={index} className={`footer-bg footerbg${index + 1}`}>
                                     <a href={partner.url}>
-                                        <div className="max-w-56 rounded-2xl overflow-hidden shadow-lg bg-[#291E7C] bg-opacity-50">
+                                        <div className="max-w-56 rounded-2xl overflow-hidden shadow-lg bg-black bg-opacity-30">
                                             <div className='m-8'>
                                                 <img className="w-full" src={partner.logo} alt={partner.name} />
                                             </div>
