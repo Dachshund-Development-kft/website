@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const getUser = async () => {
+const team = async () => {
     const token = localStorage.getItem('token');
 
     if (!token) {
@@ -9,14 +9,14 @@ const getUser = async () => {
     }
 
     try {
-        const response = await axios.get('https://papi.dachats.online/api/me', {
+        const response = await axios.get('https://papi.dachats.online/api/team', {
             headers: {
                 Authorization: `Bearer ${token}`
             }
         });
 
         if (response.data.success) {
-            return true;
+            return response.data;
         } else {
             localStorage.removeItem('token');
             return false;
@@ -27,4 +27,4 @@ const getUser = async () => {
     }
 }
 
-export default getUser;
+export default team;

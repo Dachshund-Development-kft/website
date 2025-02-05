@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import NavLayout from '../../components/navLayout';
 import FooterLayout from '../../components/footerLayout';
-import getStats from '../../api/stats';
+import score from '../../api/score';
+import team from '../../api/team';
+import getUser from '../../api/getUser';
 
 const useCountUp = (targetValue: number, duration: number = 1000) => {
     const [value, setValue] = useState(0);
@@ -28,29 +30,59 @@ const useCountUp = (targetValue: number, duration: number = 1000) => {
 
 const DashboardPage: React.FC = () => {
     const [points, setPoints] = useState<number>(0);
+    const [leaderboard, setLeaderboard] = useState<Array<{ position: number; name: string; points: number }>>([]);
+    const [position, setPosition] = useState<number>(0);
+    const [teams, setTeams] = useState<any>({});
 
     useEffect(() => {
-        getStats().then(async data => {
-            setPoints(data.data.points);
+        getUser().then(async data => {
+            if (!data) {
+                window.location.href = '/login';
+            }
         });
+
+        const fetchData = async () => {
+            try {
+                const teamResponse = await team();
+                setTeams(teamResponse.data);
+
+                const scoreResponse = await score();
+                if (scoreResponse && scoreResponse.success) {
+                    const teamData = scoreResponse.data.find((team: any) => team.team === teamResponse.data.csapat);
+                    if (teamData) {
+                        setPoints(parseInt(teamData.pont, 10));
+                    }
+
+                    const sortedLeaderboard = scoreResponse.data
+                        .sort((a: any, b: any) => parseInt(b.pont, 10) - parseInt(a.pont, 10))
+                        .map((team: any, index: number) => ({
+                            position: index + 1,
+                            name: team.team,
+                            points: parseInt(team.pont, 10),
+                        }));
+
+                    setLeaderboard(sortedLeaderboard);
+
+                    const teamIndex = sortedLeaderboard.findIndex((team: any) => team.name === teamResponse.data.csapat);
+                    if (teamIndex !== -1) {
+                        setPosition(teamIndex + 1);
+                    }
+                }
+            } catch (error) {
+                console.error("Hiba történt az adatok lekérésekor:", error);
+            }
+        };
+
+        fetchData();
     }, []);
 
     const animatedPoints = useCountUp(points);
-    const teamname = "Dachshund Development";
-    const position = 1;
 
     const stats = [
-        { title: "Név", description: "", value: 4 },
-        { title: "Csapatnév", description: "", value: teamname },
+        { title: "Név", description: "", value: teams.user || "Betöltés..." },
+        { title: "Csapatnév", description: "", value: teams.csapat || "Betöltés..." },
         { title: "Pontjaitok", description: "", value: animatedPoints },
         { title: "Helyezésetek", description: "", value: position },
-    ];
-
-    const leaderboard = [
-        { position: "1. hely", name: "Team Alpha", points: 100 },
-        { position: "2. hely", name: "Team Beta", points: 90 },
-        { position: "3. hely", name: "Team Gamma", points: 80 },
-        { position: "4. hely", name: "Team Delta", points: 70 },
     ];
 
     return (
@@ -71,14 +103,12 @@ const DashboardPage: React.FC = () => {
                 <div className="grid grid-cols-1 gap-8 w-full max-w-6xl text-white">
                     {leaderboard.map((entry, index) => (
                         <div key={index} className="bg-black bg-opacity-30 p-8 rounded-2xl shadow-xl md:flex justify-between items-center w-full">
-                        <span className="text-3xl font-semibold">{entry.position}</span><br />
-                        <span className="text-4xl font-bold">{entry.name}</span><br />
-                        <span className="text-4xl font-bold">{entry.points} pont</span><br />
-                    </div>
-                    
+                            <span className="text-3xl font-semibold">{entry.position}. hely</span>
+                            <span className="text-4xl font-bold">{entry.name}</span>
+                            <span className="text-4xl font-bold">{entry.points} pont</span>
+                        </div>
                     ))}
                 </div>
-                
             </main>
             <FooterLayout />
         </div>
