@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import NavLayout from '../components/navLayout';
-import FooterLayout from '../components/footerLayout';
-import getStats from '../api/stats';
+import NavLayout from '../../components/navLayout';
+import FooterLayout from '../../components/footerLayout';
+import getStats from '../../api/stats';
 
 const useCountUp = (targetValue: number, duration: number = 1000) => {
     const [value, setValue] = useState(0);
@@ -26,7 +26,7 @@ const useCountUp = (targetValue: number, duration: number = 1000) => {
     return value;
 };
 
-const StatisticPage: React.FC = () => {
+const DashboardPage: React.FC = () => {
     const [points, setPoints] = useState<number>(0);
     const [tasks, setTasks] = useState<number>(0);
 
@@ -66,4 +66,4 @@ const StatisticPage: React.FC = () => {
     );
 };
 
-export default StatisticPage;
+export default DashboardPage;

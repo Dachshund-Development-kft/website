@@ -5,7 +5,7 @@ import FooterLayout from '../components/footerLayout';
 
 const TeamMember: React.FC<{ member: any }> = ({ member }) => {
     return (
-        <div className="group relative bg-black bg-opacity-30 rounded-2xl p-8 w-72 text-center shadow-xl transform transition-all duration-300 hover:scale-105">
+        <div className="group relative bg-black bg-opacity-30 rounded-2xl p-8 w-72 text-center shadow-xl transform transition-all duration-300 hover:scale-105 col-span-4 md:col-span-2 xl:col-span-1">
             <img
                 src={member.image}
                 alt={member.name}
@@ -85,18 +85,18 @@ const TeamPage: React.FC = () => {
     ], []);
 
     return (
-        <main className="flex flex-col min-h-screen bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url(/blobs.svg)" }}>
+        <div className="flex flex-col min-h-screen bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url(/blobs.svg)" }}>
             <NavLayout />
-            <div className="flex flex-col items-center py-16 px-4">
-                <h1 className="text-white text-5xl font-bold mb-12 text-center">Csapatunk</h1>
-                <div className="flex flex-wrap justify-center gap-6 w-full max-w-screen-xl mt-16">
+            <main className="flex flex-col items-center py-10 px-4 mb-auto mx-auto">
+                <h1 className="text-white text-5xl font-bold mb-8 text-center">Csapatunk</h1>
+                <div className="justify-center gap-12 xl:gap-6 w-full max-w-screen-xl mt-16 grid-cols-4 grid">
                     {teamMembers.map((member, index) => (
                         <TeamMember key={index} member={member} />
                     ))}
                 </div>
-            </div>
+            </main>
             <FooterLayout />
-        </main>
+        </div>
     );
 };
 

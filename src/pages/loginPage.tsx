@@ -63,7 +63,7 @@ const LoginPage: React.FC = () => {
     return (
         <div className="flex flex-col min-h-screen text-white bg-cover bg-repeat-y" style={{ backgroundImage: "url(/blobs.svg)" }}>
             <NavLayout />
-            <main className="flex flex-grow items-center justify-center py-16">
+            <main className="flex flex-grow items-center justify-center py-16 mb-auto">
                 <form className="bg-black bg-opacity-30 rounded-2xl shadow-xl p-6 w-full max-w-sm text-center">
                     <h2 className="text-3xl font-bold bg-white bg-clip-text">
                         Bejelentkezés

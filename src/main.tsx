@@ -9,6 +9,7 @@ import StatisticPage from './pages/statisticPage'
 import TeamPage from './pages/teamPage'
 import ErrorPage from './pages/404Page'
 import LoginPage from './pages/loginPage'
+import DashboardPage from './pages/dashboard/dashboardPage'
 
 const router = createBrowserRouter([
   {
@@ -29,7 +30,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/dashboard',
-    element: <p>Sigma</p>,
+    element: <DashboardPage />,
   },
   {
     path: '*',

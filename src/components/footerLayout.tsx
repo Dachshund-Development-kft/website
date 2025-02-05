@@ -30,9 +30,14 @@ const FooterLayout: React.FC = () => {
   };
 
 return (
-  <footer className="w-full relative z-10 mt-48">
-    <img src="/footerPhone.svg" alt="Footer" className="w-full opacity-10 md:hidden block" />
-    <img src="/footerDesktop.svg" alt="Footer" className="w-full opacity-10 hidden md:block" />
+  <footer className="w-full relative z-10 mt-20">
+    <img src="/footersm.svg" alt="FooterSM" className="w-full opacity-10 md:hidden block " />
+    <img src="/footermd.svg" alt="FooterMD" className="w-full opacity-10 hidden md:block lg:hidden" />
+    <img src="/footerlg.svg" alt="FooterLG" className="w-full opacity-10 hidden lg:block xl:hidden" />
+    <img src="/footerxl.svg" alt="FooterXL" className="w-full opacity-10 hidden xl:block 2xl:hidden" />
+    <img src="/footer2xl.svg" alt="Footer2XL" className="w-full opacity-10 hidden 2xl:block 3xl:hidden" />
+    <img src="/footer3xl.svg" alt="Footer3XL" className="w-full opacity-10 hidden 3xl:block 4xl:hidden" />
+    <img src="/footer4xl.svg" alt="Footer4XL" className="w-full opacity-10 hidden 4xl:block" />
     <div className="absolute bottom-0 left-0 right-0 flex flex-col items-center justify-center py-4">
       <div className="text-center text-white">
         <div className="flex justify-center space-x-4">
