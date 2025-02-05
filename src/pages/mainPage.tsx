@@ -4,7 +4,7 @@ import FooterLayout from '../components/footerLayout';
 
 const MainPage: React.FC = () => {
     return (
-        <div className="min-h-screen text-white inset-0 bg-cover filter z-[-2] bg-repeat-y" style={{ backgroundImage: "url(/blobs.svg)" }}>
+        <div className="flex flex-col min-h-screen bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url(/blobs.svg)" }}>
             <NavLayout />
             <main className="items-center container mx-auto mb-auto">
                 <div className="items-center justify-center flex flex-col">
