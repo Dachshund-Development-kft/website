@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { HiMiniHome } from "react-icons/hi2";
 import { HiUserAdd } from "react-icons/hi";
 import { HiOutlineMenu } from "react-icons/hi";
@@ -8,9 +8,12 @@ import getUser from '../api/getUser';
 
 const NavLayout: React.FC = () => {
     const location = useLocation();
+    const navigate = useNavigate();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
     const menuRef = useRef<HTMLDivElement>(null);
     const menuButtonRef = useRef<HTMLButtonElement>(null);
+    const userMenuRef = useRef<HTMLDivElement>(null);
     const [user, setUser] = useState<any>(null);
 
     const navItems = [
@@ -21,10 +24,10 @@ const NavLayout: React.FC = () => {
 
     useEffect(() => {
         const checkUser = async () => {
-            const success = await getUser();
+            const response = await getUser();
 
-            if (success) {
-                setUser(true);
+            if (response.success) {
+                setUser(response.data);
             }
         };
 
@@ -39,13 +42,21 @@ const NavLayout: React.FC = () => {
             ) {
                 setIsMenuOpen(false);
             }
+
+            if (
+                userMenuRef.current &&
+                !userMenuRef.current.contains(event.target as Node)
+            ) {
+                setIsUserMenuOpen(false);
+            }
         }
 
         function handleScroll() {
             setIsMenuOpen(false);
+            setIsUserMenuOpen(false);
         }
 
-        if (isMenuOpen) {
+        if (isMenuOpen || isUserMenuOpen) {
             document.addEventListener("mousedown", handleClickOutside);
             window.addEventListener("scroll", handleScroll);
         } else {
@@ -57,7 +68,13 @@ const NavLayout: React.FC = () => {
             document.removeEventListener("mousedown", handleClickOutside);
             window.removeEventListener("scroll", handleScroll);
         };
-    }, [isMenuOpen]);
+    }, [isMenuOpen, isUserMenuOpen]);
+
+    const handleLogout = () => {
+        localStorage.removeItem('token');
+        setUser(null);
+        navigate('/login');
+    };
 
     return (
         <div className="flex flex-row p-2 items-center bg-[#1A1B22] bg-opacity-30 relative">
@@ -133,12 +150,34 @@ const NavLayout: React.FC = () => {
                     })}
                 </div>
             </nav>
-            <div className="hidden lg:flex items-center">
+            <div className="hidden lg:flex items-center relative">
                 {user ? (
-
-                    <a className="bg-[#0F1015] text-white px-4 py-2 rounded-md shadow-lg hover:bg-gray-700 flex items-center gap-2 transition-all duration-300" href='/dashboard'>
-                        Dashboard
-                    </a>
+                    <div ref={userMenuRef} className="relative">
+                        <button
+                            onClick={() => setIsUserMenuOpen((prev) => !prev)}
+                            className="bg-[#0F1015] text-white px-4 py-2 rounded-md shadow-lg hover:bg-gray-700 flex items-center gap-2 transition-all duration-300"
+                        >
+                            {user.user}
+                        </button>
+                        {isUserMenuOpen && (
+                            <div className="absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-[#0F1015] z-50">
+                                <div className="py-1">
+                                    <a
+                                        href="/dashboard"
+                                        className="block px-4 py-2 text-sm text-white hover:bg-gray-700"
+                                    >
+                                        Dashboard
+                                    </a>
+                                    <button
+                                        onClick={handleLogout}
+                                        className="block w-full text-left px-4 py-2 text-sm text-white hover:bg-gray-700"
+                                    >
+                                        Kijelentkezés
+                                    </button>
+                                </div>
+                            </div>
+                        )}
+                    </div>
                 ) : (
                     <a className="bg-[#0F1015] text-white px-4 py-2 rounded-md shadow-lg hover:bg-gray-700 flex items-center gap-2 transition-all duration-300" href='/login'>
                         Bejelentkezés
