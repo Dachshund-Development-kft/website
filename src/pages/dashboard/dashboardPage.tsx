@@ -28,22 +28,29 @@ const useCountUp = (targetValue: number, duration: number = 1000) => {
 
 const DashboardPage: React.FC = () => {
     const [points, setPoints] = useState<number>(0);
-    const [tasks, setTasks] = useState<number>(0);
 
     useEffect(() => {
         getStats().then(async data => {
             setPoints(data.data.points);
-            setTasks(data.data.tasks.length);
         });
     }, []);
 
     const animatedPoints = useCountUp(points);
-    const animatedTasks = useCountUp(tasks);
+    const teamname = "Dachshund Development";
+    const position = 1;
 
     const stats = [
-        { title: "Dolgozók", description: "", value: 4 },
-        { title: "Pontjaink", description: "", value: animatedPoints },
-        { title: "Feladatok", description: "", value: animatedTasks }
+        { title: "Név", description: "", value: 4 },
+        { title: "Csapatnév", description: "", value: teamname },
+        { title: "Pontjaitok", description: "", value: animatedPoints },
+        { title: "Helyezésetek", description: "", value: position },
+    ];
+
+    const leaderboard = [
+        { position: "1. hely", name: "Team Alpha", points: 100 },
+        { position: "2. hely", name: "Team Beta", points: 90 },
+        { position: "3. hely", name: "Team Gamma", points: 80 },
+        { position: "4. hely", name: "Team Delta", points: 70 },
     ];
 
     return (
@@ -51,7 +58,7 @@ const DashboardPage: React.FC = () => {
             <NavLayout />
             <main className="flex flex-col flex-grow justify-center items-center px-4 mb-auto">
                 <h1 className='text-white text-5xl font-bold my-10 text-center'>Statisztika</h1>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl text-white">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full max-w-6xl text-white">
                     {stats.map((stat, index) => (
                         <div key={index} className="bg-black bg-opacity-30 p-8 rounded-2xl shadow-xl flex flex-col items-center text-center w-full min-h-[180px]">
                             <h2 className="text-2xl font-semibold mb-2">{stat.title}</h2>
@@ -60,6 +67,18 @@ const DashboardPage: React.FC = () => {
                         </div>
                     ))}
                 </div>
+                <h1 className='text-white text-5xl font-bold my-10 text-center'>Leaderboard</h1>
+                <div className="grid grid-cols-1 gap-8 w-full max-w-6xl text-white">
+                    {leaderboard.map((entry, index) => (
+                        <div key={index} className="bg-black bg-opacity-30 p-8 rounded-2xl shadow-xl md:flex justify-between items-center w-full">
+                        <span className="text-3xl font-semibold">{entry.position}</span><br />
+                        <span className="text-4xl font-bold">{entry.name}</span><br />
+                        <span className="text-4xl font-bold">{entry.points} pont</span><br />
+                    </div>
+                    
+                    ))}
+                </div>
+                
             </main>
             <FooterLayout />
         </div>
