@@ -1,14 +1,11 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import {
   createBrowserRouter,
   RouterProvider,
 } from 'react-router-dom'
-import MainPage from './pages/mainPage'
-import StatisticPage from './pages/statisticPage'
-import TeamPage from './pages/teamPage'
-import ErrorPage from './pages/404Page'
-import LoginPage from './pages/loginPage'
+import MainPage from './pages/mainPage.tsx'
 
 const router = createBrowserRouter([
   {
