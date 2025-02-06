@@ -103,8 +103,8 @@ const DashboardPage: React.FC = () => {
                 <div className="grid grid-cols-1 gap-8 w-full max-w-6xl text-white">
                     {leaderboard.map((entry, index) => (
                         <div key={index} className="bg-black bg-opacity-30 p-8 rounded-2xl shadow-xl md:flex justify-between items-center w-full">
-                            <span className="text-3xl font-semibold">{entry.position}. hely</span>
-                            <span className="text-4xl font-bold">{entry.name}</span>
+                            <span className="text-3xl font-semibold">{entry.position}. hely</span><br className="md:hidden" />
+                            <span className="text-4xl font-bold">{entry.name}</span><br className="md:hidden" />
                             <span className="text-4xl font-bold">{entry.points} pont</span>
                         </div>
                     ))}
