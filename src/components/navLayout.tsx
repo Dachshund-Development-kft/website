@@ -116,17 +116,33 @@ const NavLayout: React.FC = () => {
                         );
                     })}
                 </div>
-                <button className=" flex items-center gap-2 transition-all duration-300 w-full mt-2">
-                    {user ? (
-                        <a className="bg-[#0F1015] text-white px-4 py-2 rounded-md shadow-lg hover:bg-gray-700 flex items-center gap-2 transition-all duration-300" href='/dashboard'>
-                            Dashboard
-                        </a>
-                    ) : (
-                        <a className="bg-[#0F1015] text-white px-4 py-2 rounded-md shadow-lg hover:bg-gray-700 flex items-center gap-2 transition-all duration-300" href='/login'>
-                            Bejelentkezés
-                        </a>
-                    )}
+                {user ? (
+                    <div>
+                        <button
+                    onClick={handleLogout}
+                    className="bg-[#0F1015] text-white px-4 py-2 rounded-md shadow-lg hover:bg-gray-700 flex items-center gap-2 transition-all duration-300 w-full mt-2"
+                >
+                    Kijelentkezés
                 </button>
+                <Link to={"/dashboard"}>
+                <button
+                    className="bg-[#0F1015] text-white px-4 py-2 rounded-md shadow-lg hover:bg-gray-700 flex items-center gap-2 transition-all duration-300 w-full mt-2"
+                >
+                    Dashboard
+                </button>
+                </Link>
+                    </div>
+                    
+                
+                
+                ) : (
+                    <a
+                        href="/login"
+                        className="bg-[#0F1015] text-white px-4 py-2 rounded-md shadow-lg hover:bg-gray-700 flex items-center gap-2 transition-all duration-300 w-full mt-2"
+                    >
+                        Bejelentkezés
+                    </a>
+                )}
             </nav>
 
             <nav className="hidden lg:flex flex-row justify-center w-full">
@@ -152,12 +168,12 @@ const NavLayout: React.FC = () => {
             </nav>
             <div className="hidden lg:flex items-center relative">
                 {user ? (
-                    <div ref={userMenuRef} className="relative">
+                    <div ref={userMenuRef} className="relative w-full">
                         <button
                             onClick={() => setIsUserMenuOpen((prev) => !prev)}
-                            className="bg-[#0F1015] text-white px-4 py-2 rounded-md shadow-lg hover:bg-gray-700 flex items-center gap-2 transition-all duration-300"
+                            className="bg-[#0F1015] text-white px-4 py-2 rounded-md shadow-lg hover:bg-gray-700 flex items-center gap-2 transition-all duration-300 w-40"
                         >
-                            {user.user}
+                            <div className="w-full">{user.user}</div>
                         </button>
                         {isUserMenuOpen && (
                             <div className="absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-[#0F1015] z-50">
