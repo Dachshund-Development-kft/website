@@ -81,8 +81,8 @@ const DashboardPage: React.FC = () => {
     const stats = [
         { title: "Név", description: "", value: teams.user || "Betöltés..." },
         { title: "Csapatnév", description: "", value: teams.csapat || "Betöltés..." },
-        { title: "Pontjaitok", description: "", value: animatedPoints },
-        { title: "Helyezésetek", description: "", value: position },
+        { title: "Pontjaitok", description: "", value: animatedPoints || "Betöltés..." },
+        { title: "Helyezésetek", description: "", value: position || "Betöltés..." },
     ];
 
     return (
@@ -102,7 +102,11 @@ const DashboardPage: React.FC = () => {
                 <h1 className='text-white text-5xl font-bold my-10 text-center'>Leaderboard</h1>
                 <div className="grid grid-cols-1 gap-8 w-full max-w-6xl text-white">
                     {leaderboard.map((entry, index) => (
-                        <div key={index} className="bg-black bg-opacity-30 p-8 rounded-2xl shadow-xl md:flex justify-between items-center w-full">
+                        <div
+                            key={index}
+                            className={`bg-black bg-opacity-30 p-8 rounded-2xl shadow-xl md:flex justify-between items-center w-full ${entry.name === teams.csapat ? 'border-2' : ''
+                                }`}
+                        >
                             <span className="text-3xl font-semibold">{entry.position}. hely</span><br className="md:hidden" />
                             <span className="text-4xl font-bold">{entry.name}</span><br className="md:hidden" />
                             <span className="text-4xl font-bold">{entry.points} pont</span>
