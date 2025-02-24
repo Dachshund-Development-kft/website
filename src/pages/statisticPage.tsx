@@ -32,7 +32,7 @@ const StatisticPage: React.FC = () => {
 
     useEffect(() => {
         getStats().then(async data => {
-            setPoints(data.data.points);
+            setPoints(data.data.osszpont);
             setTasks(data.data.tasks.length);
         });
     }, []);
