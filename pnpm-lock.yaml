@@ -37,7 +37,7 @@ importers:
         specifier: ^3.5.32
         version: 3.5.32
       '@types/react':
-        specifier: ^19.0.12
+        specifier: ^19.1.6
         version: 19.1.6
       '@types/react-dom':
         specifier: ^19.1.5
